@@ -198,32 +198,49 @@ export default function Landing() {
             className="text-xs font-mono tracking-widest uppercase mb-5"
             style={{ color: "oklch(0.35 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}
           >
-            8 Archetypes Identified
+            9 Archetypes Identified
           </p>
           <div className="flex flex-wrap gap-2">
             {[
-              { name: "The Builder", color: "#60a5fa" },
-              { name: "The Sage", color: "#34d399" },
-              { name: "The Critic", color: "#a78bfa" },
-              { name: "The Hustler", color: "#fb923c" },
-              { name: "The Follower", color: "#38bdf8" },
-              { name: "The Performer", color: "#f472b6" },
-              { name: "The Skeptic", color: "#facc15" },
-              { name: "The Olodo", color: "#f87171" },
+              { name: "The Builder", desc: "Executes relentlessly. Treats people like metrics.", color: "#60a5fa" },
+              { name: "The Sage", desc: "Debates brilliantly while the house burns.", color: "#34d399" },
+              { name: "The Critic", desc: "Twitter threads that change nothing.", color: "#a78bfa" },
+              { name: "The Hustler", desc: "Lagos on steroids. Money moves, nothing gets built.", color: "#fb923c" },
+              { name: "The Follower", desc: "Waiting for a strongman to tell them what to do.", color: "#38bdf8" },
+              { name: "The Performer", desc: "Nollywood meets Instagram. Entertaining, shallow.", color: "#f472b6" },
+              { name: "The Skeptic", desc: "Can't be conned but also can't agree on anything.", color: "#facc15" },
+              { name: "The Intellectual", desc: "Should know better. Uses education to justify lies, bigotry, corruption.", color: "#a78bfa" },
+              { name: "The Olodo", desc: "Proudly uninformed. Burns bright and fast.", color: "#f87171" },
             ].map((a) => (
-              <span
+              <div
                 key={a.name}
-                className="text-xs px-3 py-1 font-mono"
-                style={{
-                  fontFamily: "'JetBrains Mono', monospace",
-                  color: a.color,
-                  background: `${a.color}14`,
-                  border: `1px solid ${a.color}30`,
-                  borderRadius: "2px",
-                }}
+                className="group relative"
               >
-                {a.name}
-              </span>
+                <span
+                  className="text-xs px-3 py-1 font-mono cursor-help"
+                  style={{
+                    fontFamily: "'JetBrains Mono', monospace",
+                    color: a.color,
+                    background: `${a.color}14`,
+                    border: `1px solid ${a.color}30`,
+                    borderRadius: "2px",
+                  }}
+                >
+                  {a.name}
+                </span>
+                <div
+                  className="absolute bottom-full left-0 mb-2 px-3 py-2 text-xs whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-50"
+                  style={{
+                    background: "oklch(0.15 0.01 260)",
+                    border: `1px solid ${a.color}40`,
+                    color: "oklch(0.85 0.01 260)",
+                    borderRadius: "2px",
+                    fontFamily: "'Inter', sans-serif",
+                  }}
+                >
+                  {a.desc}
+                </div>
+              </div>
             ))}
           </div>
         </div>
