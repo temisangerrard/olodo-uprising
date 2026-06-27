@@ -6,28 +6,22 @@
 
 import { useLocation } from "wouter";
 import { motion } from "framer-motion";
+import LogoIcon from "@/components/LogoIcon";
 
 export default function Landing() {
   const [, setLocation] = useLocation();
 
   return (
     <div className="min-h-screen relative overflow-hidden" style={{ background: "oklch(0.12 0.008 260)" }}>
-      {/* Hero background image */}
+      {/* Gradient mesh background */}
       <div
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url(/manus-storage/hero-bg_9b456c9e.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          opacity: 0.35,
-        }}
-      />
-
-      {/* Gradient overlay — left side darker for text legibility */}
-      <div
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(105deg, oklch(0.12 0.008 260 / 0.97) 40%, oklch(0.12 0.008 260 / 0.6) 100%)",
+          background: `
+            radial-gradient(ellipse 80% 60% at 70% 40%, oklch(0.78 0.16 75 / 0.06) 0%, transparent 60%),
+            radial-gradient(ellipse 60% 80% at 20% 80%, oklch(0.62 0.22 25 / 0.04) 0%, transparent 50%),
+            oklch(0.12 0.008 260)
+          `,
         }}
       />
 
@@ -42,11 +36,7 @@ export default function Landing() {
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
         <div className="flex items-center gap-3">
-          <img
-            src="/manus-storage/logo-icon_bec4eb3b.png"
-            alt="Olodo Uprising"
-            className="w-8 h-8 object-contain"
-          />
+          <LogoIcon size={32} />
           <span
             className="text-sm font-mono tracking-widest uppercase"
             style={{ color: "oklch(0.78 0.16 75)", fontFamily: "'JetBrains Mono', monospace" }}
@@ -174,19 +164,6 @@ export default function Landing() {
           </div>
         </motion.div>
       </main>
-
-      {/* Bottom city illustration */}
-      <div
-        className="absolute bottom-0 right-0 w-full md:w-2/3 h-64 z-0 pointer-events-none"
-        style={{
-          backgroundImage: "url(/manus-storage/society-illustration_2755073a.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "top center",
-          opacity: 0.25,
-          maskImage: "linear-gradient(to top, oklch(0 0 0) 0%, transparent 100%)",
-          WebkitMaskImage: "linear-gradient(to top, oklch(0 0 0) 0%, transparent 100%)",
-        }}
-      />
 
       {/* Archetype preview strip */}
       <motion.div
