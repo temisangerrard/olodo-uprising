@@ -7,6 +7,7 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
+import LogoIcon from "@/components/LogoIcon";
 import {
   RadarChart,
   PolarGrid,
@@ -135,21 +136,14 @@ export default function Results() {
       <div
         className="absolute inset-0 z-0 pointer-events-none"
         style={{
-          backgroundImage: "url(/manus-storage/results-bg_ad8a2806.png)",
-          backgroundSize: "cover",
-          backgroundPosition: "center left",
-          opacity: 0.15,
+          background: "radial-gradient(ellipse 100% 60% at 50% 30%, oklch(0.78 0.16 75 / 0.06) 0%, transparent 70%)",
         }}
       />
 
       {/* Header */}
       <header className="relative z-10 flex items-center justify-between px-6 py-5 md:px-12">
         <div className="flex items-center gap-3">
-          <img
-            src="/manus-storage/logo-icon_bec4eb3b.png"
-            alt="Olodo Uprising"
-            className="w-7 h-7 object-contain"
-          />
+          <LogoIcon size={28} />
           <span
             className="text-xs font-mono tracking-widest uppercase hidden sm:block"
             style={{ color: "oklch(0.40 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}

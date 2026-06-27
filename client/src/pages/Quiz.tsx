@@ -8,6 +8,7 @@ import { useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import { QUESTIONS } from "@/lib/data";
+import LogoIcon from "@/components/LogoIcon";
 
 export default function Quiz() {
   const [, setLocation] = useLocation();
@@ -66,11 +67,7 @@ export default function Quiz() {
       {/* Header */}
       <header className="flex items-center justify-between px-6 py-5 md:px-12 pt-8">
         <div className="flex items-center gap-3">
-          <img
-            src="/manus-storage/logo-icon_bec4eb3b.png"
-            alt="Olodo Uprising"
-            className="w-7 h-7 object-contain"
-          />
+          <LogoIcon size={28} />
           <span
             className="text-xs font-mono tracking-widest uppercase hidden sm:block"
             style={{ color: "oklch(0.40 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}

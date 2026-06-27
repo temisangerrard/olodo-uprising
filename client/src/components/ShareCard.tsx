@@ -56,7 +56,7 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
   }
 
   async function copyShareText() {
-    const text = `I took the Olodo Uprising assessment.\n\nI am: ${archetype.name}\n"${archetype.tagline}"\n\n10,000 of me in a city: ${archetype.society.verdict}\n\n#OlodoUprising — oloudrise-vo2fppsm.manus.space`;
+    const text = `I took the Olodo Uprising assessment.\n\nI am: ${archetype.name}\n"${archetype.tagline}"\n\n10,000 of me in a city: ${archetype.society.verdict}\n\n#OlodoUprising — olodo-uprising.pages.dev`;
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -265,7 +265,7 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
               color: "oklch(0.30 0.01 260)",
             }}
           >
-            oloudrise-vo2fppsm.manus.space
+            olodo-uprising.pages.dev
           </div>
         </div>
       </div>
