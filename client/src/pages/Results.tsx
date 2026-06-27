@@ -21,6 +21,7 @@ import {
   classifyArchetype,
   ARCHETYPES,
   SOCIETY_DIMENSIONS,
+  QUESTIONS,
   type ArchetypeId,
   type AxisScores,
 } from "@/lib/data";
@@ -120,6 +121,22 @@ export default function Results() {
   }
 
   const archetype = ARCHETYPES[archetypeId];
+
+  // Find the most revealing questions for this archetype
+  const answers = JSON.parse(sessionStorage.getItem("olodo_answers") || "[]");
+  const revealingQuestions = QUESTIONS.filter(q => {
+    const answer = answers.find((a: any) => a.questionId === q.id);
+    if (!answer) return false;
+    const option = q.options.find(o => o.id === answer.optionId);
+    if (!option) return false;
+    
+    // For Intellectual: high K, low T, low Ac
+    if (archetypeId === "intellectual") {
+      return (option.scores.K || 0) >= 3 && (option.scores.T || 0) === 0 && (option.scores.Ac || 0) === 0;
+    }
+    // For other archetypes, show questions with high scores on their key axes
+    return Object.values(option.scores).some(v => v >= 3);
+  }).slice(0, 3); // Show top 3 most revealing questions
 
   const radarData = SOCIETY_DIMENSIONS.map((d) => ({
     dimension: d.label.split(" & ")[0].split(" ")[0],
@@ -505,6 +522,60 @@ export default function Results() {
                 </div>
               </motion.div>
 
+              {/* Revealing Questions */}
+              {revealingQuestions.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 16 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.52, ease: [0.23, 1, 0.32, 1] }}
+                  className="p-6 border mb-8"
+                  style={{
+                    background: "oklch(0.17 0.008 260)",
+                    borderColor: "oklch(1 0 0 / 0.08)",
+                    borderRadius: "2px",
+                  }}
+                >
+                  <div
+                    className="text-xs font-mono tracking-widest uppercase mb-5"
+                    style={{ color: "oklch(0.55 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}
+                  >
+                    What Revealed You
+                  </div>
+                  <div className="flex flex-col gap-4">
+                    {revealingQuestions.map((q, idx) => {
+                      const answer = answers.find((a: any) => a.questionId === q.id);
+                      const option = q.options.find(o => o.id === answer.optionId);
+                      return (
+                        <div
+                          key={q.id}
+                          className="border-l-2 pl-4"
+                          style={{ borderColor: archetype.accentHex }}
+                        >
+                          <div
+                            className="text-xs font-mono mb-2"
+                            style={{ color: "oklch(0.40 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}
+                          >
+                            Question {q.id}
+                          </div>
+                          <div
+                            className="text-sm mb-2"
+                            style={{ color: "oklch(0.75 0.005 65)", fontFamily: "'Space Grotesk', sans-serif" }}
+                          >
+                            {q.text}
+                          </div>
+                          <div
+                            className="text-sm font-semibold"
+                            style={{ color: archetype.accentHex }}
+                          >
+                            Your answer: {option?.text}
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+                </motion.div>
+              )}
+
               {/* Share Card */}
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
@@ -518,7 +589,18 @@ export default function Results() {
                 >
                   Share Your Result
                 </div>
-                <ShareCard archetypeId={archetypeId} />
+                <ShareCard 
+                  archetypeId={archetypeId} 
+                  revealingQuestions={revealingQuestions.map(q => {
+                    const answer = answers.find((a: any) => a.questionId === q.id);
+                    const option = q.options.find(o => o.id === answer.optionId);
+                    return {
+                      id: q.id,
+                      text: q.text,
+                      chosenOption: option?.text || "",
+                    };
+                  })}
+                />
               </motion.div>
 
               {/* Mixed Society Simulator */}

@@ -60,209 +60,285 @@ export interface Archetype {
 }
 
 // ============================================================
-// QUESTION BANK (20 questions)
-// Nigerian cultural context, moral ambiguity, dramatic tension
+// QUESTION BANK (25 questions)
+// Grounded in real Nigerian events and social tensions
+// Each question reveals archetype through moral choices
 // ============================================================
 
 export const QUESTIONS: Question[] = [
+  // Q1: Deborah Yakubu case — reveals truth vs tribal/religious loyalty
   {
     id: 1,
-    text: "Your uncle asks you to help him 'sort' a government contract. He says it's how things work here. You:",
+    text: "A university student is accused of blasphemy and killed by a mob. The evidence shows the accusation was false. Your religious leaders say the killing was 'understandable.' You:",
     options: [
-      { id: "a", text: "Help him — family comes first, and this is how Nigeria works.", scores: { Ac: 0, S: 3, T: 1 } },
-      { id: "b", text: "Refuse — corruption starts with small compromises.", scores: { Ac: 4, T: 4 } },
-      { id: "c", text: "Find a legal way to help him without breaking rules.", scores: { K: 3, T: 3, S: 2 } },
-      { id: "d", text: "Help him but negotiate a cut for yourself.", scores: { Ac: 0, T: 0, A: 3 } },
+      { id: "a", text: "Condemn the killing publicly, regardless of your faith.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Stay quiet — speaking out puts you at risk.", scores: { A: 2, T: 0, Ac: 0 } },
+      { id: "c", text: "Write sophisticated arguments about 'religious sensitivity' that implicitly justify the mob.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Share angry posts but don't actually do anything concrete.", scores: { S: 2, T: 1, Ac: 1 } },
     ],
   },
+  // Q2: #EndSARS — reveals activism vs opportunism
   {
     id: 2,
-    text: "An elder in your community says something factually wrong at a gathering. Everyone nods respectfully. You:",
+    text: "During #EndSARS, you see young people risking their lives for police reform. You:",
     options: [
-      { id: "a", text: "Stay quiet — respect for elders is non-negotiable.", scores: { S: 2, T: 0, A: 0 } },
-      { id: "b", text: "Correct them publicly — truth matters more than hierarchy.", scores: { T: 4, A: 4, S: 0 } },
-      { id: "c", text: "Speak to them privately after the gathering.", scores: { T: 3, S: 3, A: 2 } },
-      { id: "d", text: "Use their mistake to make yourself look smarter.", scores: { T: 0, Ac: 0, A: 3 } },
+      { id: "a", text: "Join the protests and provide logistical support.", scores: { S: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Use the moment to build your personal brand and gain followers.", scores: { A: 3, S: 1, Ac: 0 } },
+      { id: "c", text: "Write detailed analyses of why the protests will fail.", scores: { K: 3, S: 1, T: 1 } },
+      { id: "d", text: "Support whichever side your family and community supports.", scores: { A: 2, S: 2, T: 0 } },
     ],
   },
+  // Q3: Ethnic hiring — reveals merit vs tribal loyalty
   {
     id: 3,
-    text: "You discover a way to make quick money through a scheme that technically isn't illegal but hurts others. You:",
+    text: "You're hiring for a critical role. A highly qualified candidate from your ethnic group is available, but there's a better candidate from a different group. You:",
     options: [
-      { id: "a", text: "Take it — if it's not illegal, it's not wrong. Everyone is doing something similar.", scores: { Ac: 0, T: 0, A: 3 } },
-      { id: "b", text: "Decline — the harm to others outweighs the gain.", scores: { Ac: 4, T: 4, S: 3 } },
-      { id: "c", text: "Find a way to benefit while minimising harm.", scores: { K: 2, T: 2, Ac: 2 } },
-      { id: "d", text: "Expose the scheme publicly to prevent others from doing it.", scores: { T: 4, S: 4, A: 3 } },
+      { id: "a", text: "Hire the best candidate, regardless of ethnicity.", scores: { T: 4, Ac: 4, K: 2 } },
+      { id: "b", text: "Hire your ethnic kin — they'll understand the culture better.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Create a sophisticated justification for why your ethnic candidate is actually better.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Delay the decision and hope someone else makes it for you.", scores: { A: 2, T: 1, S: 1 } },
     ],
   },
+  // Q4: Corruption compromise — reveals integrity vs pragmatism
   {
     id: 4,
-    text: "Your friend posts misinformation on social media. It's getting thousands of shares. You:",
+    text: "A politician offers you funding for your community project, but the money comes from corruption. You:",
     options: [
-      { id: "a", text: "Call them out publicly — they need to face consequences.", scores: { T: 3, A: 4, S: 1 } },
-      { id: "b", text: "Message them privately with the correct information.", scores: { T: 4, S: 3, Ac: 3 } },
-      { id: "c", text: "Say nothing — it's not your fight.", scores: { S: 1, A: 0, T: 0 } },
-      { id: "d", text: "Use the moment to post your own 'correct' take and gain followers.", scores: { T: 1, Ac: 0, A: 4 } },
+      { id: "a", text: "Refuse — dirty money corrupts the project.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Accept it — the community needs this, and you can do good with the money.", scores: { A: 3, S: 3, T: 1 } },
+      { id: "c", text: "Accept it and write op-eds defending the politician's 'generosity.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Publicly condemn corruption but privately take the money.", scores: { T: 0, Ac: 0, A: 3 } },
     ],
   },
+  // Q5: Religious bigotry in politics — reveals principle vs voting bloc
   {
     id: 5,
-    text: "You're in a debate and you realise you're wrong. But your argument is winning the crowd. You:",
+    text: "A presidential candidate from your religion makes openly bigoted statements against other faiths. Your religious leaders endorse them. You:",
     options: [
-      { id: "a", text: "Admit you're wrong immediately — truth over ego.", scores: { T: 4, Ac: 4 } },
-      { id: "b", text: "Keep going — the crowd doesn't know the difference and you're making a point.", scores: { T: 0, Ac: 0, A: 3 } },
-      { id: "c", text: "Pivot subtly — acknowledge a minor flaw but maintain your position.", scores: { T: 1, Ac: 1, K: 2 } },
-      { id: "d", text: "Double down with more sophisticated arguments — they'll never know.", scores: { T: 0, Ac: 0, K: 3 } },
+      { id: "a", text: "Vote against them and speak out against the bigotry.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Vote for them anyway — religious solidarity matters more.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Write nuanced pieces about 'understanding both sides' without condemning the bigotry.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Don't vote — all politicians are the same.", scores: { T: 1, A: 2, S: 1 } },
     ],
   },
+  // Q6: Media manipulation — reveals critical thinking vs gullibility
   {
     id: 6,
-    text: "A qualified person loses a job to someone less qualified but better connected. You:",
+    text: "A viral video shows your ethnic group attacking another group. Later, evidence emerges the video was doctored. You:",
     options: [
-      { id: "a", text: "Speak up — merit should matter more than connections.", scores: { T: 4, A: 4, S: 2 } },
-      { id: "b", text: "Accept it — this is how Nigeria works. Connections are part of the game.", scores: { T: 1, A: 1, S: 2 } },
-      { id: "c", text: "Use your own connections to help the qualified person elsewhere.", scores: { K: 2, S: 3, A: 3 } },
-      { id: "d", text: "Build better connections so you can benefit from the same system.", scores: { Ac: 1, A: 4, T: 0 } },
+      { id: "a", text: "Publicly correct the record and apologize for sharing it.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Quietly delete your posts without acknowledging the error.", scores: { T: 1, Ac: 1, A: 2 } },
+      { id: "c", text: "Argue that even if doctored, it 'reflects underlying truths.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Share the debunking but also share 'concerns' about the other group.", scores: { T: 1, A: 2, K: 2 } },
     ],
   },
+  // Q7: Expertise for hire — reveals intellectual honesty
   {
     id: 7,
-    text: "You have the skills to build something valuable but it requires years of slow, unglamorous work. You:",
+    text: "You're an expert. A group pays you to produce research supporting their position, which you know is wrong. You:",
     options: [
-      { id: "a", text: "Commit to the long path — real value takes time.", scores: { K: 4, Ac: 4, A: 3 } },
-      { id: "b", text: "Find a faster way to monetise your skills first, then build slowly.", scores: { A: 4, K: 2, Ac: 2 } },
-      { id: "c", text: "Look for shortcuts — if others are cutting corners, you can't afford to be slow.", scores: { Ac: 0, A: 3, K: 1 } },
-      { id: "d", text: "Talk about building it instead — the vision is valuable even if you don't execute.", scores: { K: 1, A: 2, Ac: 0 } },
+      { id: "a", text: "Decline — your expertise has ethical limits.", scores: { T: 4, Ac: 4, K: 2 } },
+      { id: "b", text: "Accept the money and produce the best case you can for their position.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Accept but water down the conclusions to be less misleading.", scores: { T: 2, Ac: 2, K: 2 } },
+      { id: "d", text: "Accept and donate the money to charity — you're still doing good.", scores: { A: 3, S: 2, T: 1 } },
     ],
   },
+  // Q8: Community development — reveals builder vs talker
   {
     id: 8,
-    text: "Your community is divided along ethnic lines. Your ethnic group is being favoured. You:",
+    text: "Your community needs a school. The government won't build it. You:",
     options: [
-      { id: "a", text: "Speak against the favouritism — fairness matters more than tribe.", scores: { T: 4, S: 4, Ac: 4 } },
-      { id: "b", text: "Accept the advantage — this is how politics works here.", scores: { T: 0, S: 2, Ac: 0 } },
-      { id: "c", text: "Use the advantage quietly while advocating for fairness in principle.", scores: { T: 1, Ac: 1, A: 3 } },
-      { id: "d", text: "Leverage it to build power so you can help your people later.", scores: { T: 0, Ac: 1, A: 4 } },
+      { id: "a", text: "Organize the community and start building it yourselves.", scores: { S: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Write detailed proposals and lobby the government persistently.", scores: { K: 3, S: 3, Ac: 3 } },
+      { id: "c", text: "Post about the problem on social media and tag relevant officials.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "d", text: "Wait for someone else to solve it — it's not your responsibility.", scores: { A: 2, T: 0, S: 0 } },
     ],
   },
+  // Q9: Changing your mind — reveals intellectual honesty
   {
     id: 9,
-    text: "You're offered a lucrative contract that requires you to publicly support a policy you know is harmful. You:",
+    text: "You've publicly defended a position for years. New evidence proves you wrong. You:",
     options: [
-      { id: "a", text: "Decline — your integrity isn't for sale.", scores: { T: 4, Ac: 4 } },
-      { id: "b", text: "Take it — you can do more good with the money than without it.", scores: { T: 1, Ac: 1, A: 3 } },
-      { id: "c", text: "Negotiate — support it publicly but work to minimise the harm privately.", scores: { T: 2, Ac: 2, K: 3 } },
-      { id: "d", text: "Take it and use the platform to subtly undermine the policy.", scores: { T: 2, Ac: 2, A: 4 } },
+      { id: "a", text: "Publicly admit you were wrong and explain what changed your mind.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Quietly shift your position without acknowledging the contradiction.", scores: { T: 1, Ac: 1, K: 2 } },
+      { id: "c", text: "Find sophisticated reasons why the evidence doesn't apply to your case.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Ignore the evidence — you've invested too much to change now.", scores: { T: 0, Ac: 0, A: 2 } },
     ],
   },
+  // Q10: Tribal violence — reveals moral clarity vs tribal loyalty
   {
     id: 10,
-    text: "A young person asks you for advice. You know the honest answer is 'work hard for years' but they want a shortcut. You:",
+    text: "Members of your ethnic group are attacked. Your community demands revenge against innocent people from another group. You:",
     options: [
-      { id: "a", text: "Tell them the truth — there are no shortcuts to real success.", scores: { T: 4, K: 4, S: 2 } },
-      { id: "b", text: "Give them the shortcut — they'll learn from experience.", scores: { T: 1, S: 3, Ac: 1 } },
-      { id: "c", text: "Tell them what they want to hear — they'll figure it out eventually.", scores: { T: 0, Ac: 0, S: 2 } },
-      { id: "d", text: "Sell them a course on the shortcut — if they're not going to listen, at least profit from it.", scores: { T: 0, Ac: 0, A: 4 } },
+      { id: "a", text: "Condemn revenge and demand justice through proper channels.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Support revenge — your people need to defend themselves.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Write sophisticated justifications for why revenge is 'understandable.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Stay quiet — speaking out makes you a target from both sides.", scores: { A: 2, T: 0, S: 1 } },
     ],
   },
+  // Q11: Educational standards — reveals merit vs access
   {
     id: 11,
-    text: "You witness corruption in your workplace. Reporting it could cost you your job. You:",
+    text: "University admission standards are excluding many students from your region. You:",
     options: [
-      { id: "a", text: "Report it — some things matter more than a paycheck.", scores: { T: 4, Ac: 4, A: 3 } },
-      { id: "b", text: "Document it quietly and use it as leverage if needed.", scores: { T: 1, Ac: 1, A: 4 } },
-      { id: "c", text: "Look for another job — you can't fight the system alone.", scores: { T: 2, A: 2, S: 1 } },
-      { id: "d", text: "Join in — if everyone is doing it, you might as well benefit.", scores: { T: 0, Ac: 0, S: 2 } },
+      { id: "a", text: "Advocate for better primary education, not lower standards.", scores: { K: 4, S: 4, Ac: 3 } },
+      { id: "b", text: "Demand quota systems to ensure your region is represented.", scores: { A: 3, T: 1, K: 1 } },
+      { id: "c", text: "Write op-eds about how 'standardized testing is culturally biased.'", scores: { K: 3, T: 1, A: 2 } },
+      { id: "d", text: "Accept that your region needs to catch up — standards shouldn't change.", scores: { T: 3, Ac: 3, A: 1 } },
     ],
   },
+  // Q12: Whistleblowing — reveals loyalty vs truth
   {
     id: 12,
-    text: "Someone with less education than you is making a valid point in a discussion. You:",
+    text: "You discover your organization is engaged in harmful practices. Reporting it will hurt your community's reputation. You:",
     options: [
-      { id: "a", text: "Acknowledge their point — wisdom isn't limited to the educated.", scores: { T: 4, S: 4, K: 3 } },
-      { id: "b", text: "Listen but respond with more sophisticated arguments to show your expertise.", scores: { T: 2, K: 3, Ac: 1 } },
-      { id: "c", text: "Dismiss them subtly — they don't understand the complexity.", scores: { T: 1, K: 2, S: 0 } },
-      { id: "d", text: "Use their lack of education to undermine their entire argument.", scores: { T: 0, Ac: 0, K: 2 } },
+      { id: "a", text: "Report it — harm is harm, regardless of who commits it.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Try to fix it internally first, without public exposure.", scores: { S: 3, Ac: 3, T: 2 } },
+      { id: "c", text: "Stay quiet — your community has enough problems.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Leak it anonymously but deny involvement if questioned.", scores: { T: 2, Ac: 1, A: 2 } },
     ],
   },
+  // Q13: Religious extremism — reveals principle vs comfort
   {
     id: 13,
-    text: "You can make a lot of money by selling a product you know is mediocre. You:",
+    text: "Your religious community is becoming increasingly intolerant. You:",
     options: [
-      { id: "a", text: "Don't sell it — your reputation matters more than quick money.", scores: { Ac: 4, T: 4, K: 3 } },
-      { id: "b", text: "Sell it but be transparent about its limitations.", scores: { T: 3, Ac: 3, A: 3 } },
-      { id: "c", text: "Sell it and emphasise the positives — everyone does this.", scores: { T: 1, Ac: 1, A: 4 } },
-      { id: "d", text: "Overpromise and deliver the minimum — they'll blame themselves for expecting more.", scores: { T: 0, Ac: 0, A: 4 } },
+      { id: "a", text: "Speak out against the intolerance, even if it makes you unpopular.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Leave and find a more tolerant community.", scores: { S: 2, T: 2, A: 2 } },
+      { id: "c", text: "Stay but focus on the 'positive aspects' of your faith.", scores: { A: 2, T: 1, S: 2 } },
+      { id: "d", text: "Go along with it — you don't want to rock the boat.", scores: { A: 3, T: 0, Ac: 0 } },
     ],
   },
+  // Q14: Political corruption — reveals action vs cynicism
   {
     id: 14,
-    text: "Your family expects you to follow a traditional path. You want something different. You:",
+    text: "Your preferred politician is caught in corruption. You:",
     options: [
-      { id: "a", text: "Follow your own path — your life is yours to live.", scores: { A: 4, T: 3, Ac: 3 } },
-      { id: "b", text: "Compromise — find a way to honour them while pursuing your goal.", scores: { S: 3, A: 3, T: 2 } },
-      { id: "c", text: "Follow their path — family respect is non-negotiable.", scores: { S: 4, A: 0, T: 1 } },
-      { id: "d", text: "Tell them you're following your path but secretly rely on their support.", scores: { A: 2, Ac: 0, T: 1 } },
+      { id: "a", text: "Condemn them and support accountability, even if it hurts your side.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Defend them — all politicians are corrupt, and your side needs power.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Write nuanced pieces about 'the complexity of governance.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Become more cynical — all politicians are the same.", scores: { T: 1, A: 2, S: 1 } },
     ],
   },
+  // Q15: Gender discrimination — reveals principle vs culture
   {
     id: 15,
-    text: "You're in a position of power. Someone offers you a gift in exchange for a favour. It's a small favour. You:",
+    text: "Your cultural tradition discriminates against women. You:",
     options: [
-      { id: "a", text: "Refuse — even small favours corrupt the system.", scores: { Ac: 4, T: 4 } },
-      { id: "b", text: "Accept the gift but don't do the favour — you're not corrupt.", scores: { Ac: 1, T: 2, A: 2 } },
-      { id: "c", text: "Accept both — the favour is small and everyone does it.", scores: { Ac: 0, T: 0, S: 2 } },
-      { id: "d", text: "Accept the gift and do the favour, but justify it as 'helping someone'.", scores: { Ac: 0, T: 0, A: 3 } },
+      { id: "a", text: "Challenge the tradition publicly and advocate for change.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Work within the tradition to slowly change it.", scores: { S: 3, Ac: 3, T: 2 } },
+      { id: "c", text: "Defend the tradition as 'cultural preservation.'", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
+      { id: "d", text: "Follow the tradition personally but don't impose it on others.", scores: { A: 2, T: 1, S: 1 } },
     ],
   },
+  // Q16: Media responsibility — reveals truth vs narrative
   {
     id: 16,
-    text: "You see someone being praised for something they didn't actually do. You:",
+    text: "You're a journalist. A story that would help your community is based on weak evidence. You:",
     options: [
-      { id: "a", text: "Speak up — false praise harms everyone.", scores: { T: 4, Ac: 4, A: 3 } },
-      { id: "b", text: "Stay quiet — it's not your problem.", scores: { T: 1, A: 0, S: 1 } },
-      { id: "c", text: "Use the moment to position yourself as the real contributor.", scores: { T: 1, Ac: 0, A: 4 } },
-      { id: "d", text: "Congratulate them publicly, then correct the record privately.", scores: { T: 2, S: 3, Ac: 2 } },
+      { id: "a", text: "Don't publish it — weak evidence is irresponsible.", scores: { T: 4, Ac: 4, K: 3 } },
+      { id: "b", text: "Publish it with caveats about the evidence.", scores: { T: 2, Ac: 2, K: 2 } },
+      { id: "c", text: "Publish it — the narrative is more important than perfect evidence.", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
+      { id: "d", text: "Wait for stronger evidence, even if it means missing the story.", scores: { K: 3, T: 3, Ac: 2 } },
     ],
   },
+  // Q17: Youth unemployment — reveals solutions vs complaints
   {
     id: 17,
-    text: "A policy you strongly oppose is popular with most people. You:",
+    text: "Youth unemployment is crisis-level. You:",
     options: [
-      { id: "a", text: "Speak against it with evidence — popularity doesn't make something right.", scores: { T: 4, A: 4, K: 3 } },
-      { id: "b", text: "Accept it — democracy means accepting the majority view.", scores: { S: 3, T: 2, A: 1 } },
-      { id: "c", text: "Stay quiet but vote against it.", scores: { T: 2, A: 1, S: 2 } },
-      { id: "d", text: "Publicly support it while privately working to undermine it.", scores: { T: 0, Ac: 0, A: 4 } },
+      { id: "a", text: "Start a business or training program to create opportunities.", scores: { S: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Advocate for policy changes and systemic reform.", scores: { K: 3, S: 3, Ac: 3 } },
+      { id: "c", text: "Post about the problem and blame the government.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "d", text: "Focus on your own career — you can't solve systemic problems.", scores: { A: 3, T: 0, S: 0 } },
     ],
   },
+  // Q18: Interfaith marriage — reveals principle vs prejudice
   {
     id: 18,
-    text: "You have the opportunity to exaggerate your qualifications to get a job you're almost qualified for. You:",
+    text: "Your child wants to marry someone from a different religion. Your religious community opposes it. You:",
     options: [
-      { id: "a", text: "Don't exaggerate — if you don't get it, you don't deserve it.", scores: { Ac: 4, T: 4 } },
-      { id: "b", text: "Emphasise your strengths honestly — let them decide.", scores: { T: 3, Ac: 3, A: 2 } },
-      { id: "c", text: "Add a small exaggeration — everyone does this.", scores: { T: 1, Ac: 1, A: 3 } },
-      { id: "d", text: "Lie boldly — you'll figure out the rest once you're in.", scores: { T: 0, Ac: 0, A: 4 } },
+      { id: "a", text: "Support their choice — love matters more than religion.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Ask them to reconsider — religious compatibility is important.", scores: { A: 3, T: 1, S: 2 } },
+      { id: "c", text: "Write sophisticated arguments about 'preserving religious identity.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Oppose it strongly — religious boundaries must be maintained.", scores: { A: 3, T: 0, Ac: 0 } },
     ],
   },
+  // Q19: Historical revisionism — reveals truth vs narrative
   {
     id: 19,
-    text: "Your community needs a leader. The most qualified person is unpopular. The most popular person is unqualified. You support:",
+    text: "Your ethnic group's historical narrative about a conflict is inaccurate. You:",
     options: [
-      { id: "a", text: "The qualified person — competence matters more than popularity.", scores: { K: 4, T: 4, S: 2 } },
-      { id: "b", text: "The popular person — they can learn and they have the people's trust.", scores: { S: 4, T: 1, A: 2 } },
-      { id: "c", text: "Neither — find a compromise candidate.", scores: { S: 3, T: 2, A: 2 } },
-      { id: "d", text: "Whoever will advance your interests.", scores: { Ac: 0, T: 0, A: 4 } },
+      { id: "a", text: "Correct the record, even if it undermines your group's position.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Stay quiet — the narrative serves a purpose.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Write sophisticated histories that 'contextualize' the inaccuracies.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Privately know the truth but publicly support the narrative.", scores: { T: 1, Ac: 0, A: 2, K: 2 } },
     ],
   },
+  // Q20: Resource allocation — reveals merit vs favoritism
   {
     id: 20,
-    text: "You can make a difference in your community, but it requires sacrificing your personal comfort. You:",
+    text: "You control resources for your community. Your family expects preferential treatment. You:",
     options: [
-      { id: "a", text: "Make the sacrifice — the community needs you.", scores: { S: 4, Ac: 4, A: 3 } },
-      { id: "b", text: "Find a way to help without sacrificing too much.", scores: { S: 3, A: 3, Ac: 2 } },
-      { id: "c", text: "Focus on your own success first — you can help later.", scores: { A: 3, S: 1, Ac: 1 } },
-      { id: "d", text: "Talk about helping but don't actually do it — the intention counts.", scores: { S: 1, Ac: 0, A: 2 } },
+      { id: "a", text: "Allocate based on need and merit, regardless of family.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Help your family first — that's what family is for.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Create complex criteria that justify helping your family.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Try to balance family expectations with fair allocation.", scores: { T: 2, Ac: 2, A: 2 } },
+    ],
+  },
+  // Q21: Political tribalism — reveals truth vs team loyalty
+  {
+    id: 21,
+    text: "Your political party is clearly wrong about a policy. You:",
+    options: [
+      { id: "a", text: "Speak out publicly against the wrong policy.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Support the party — unity matters more than being right.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Write sophisticated defenses of the party's position.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Leave the party and find one that aligns with your views.", scores: { T: 3, S: 2, A: 1 } },
+    ],
+  },
+  // Q22: Educational access — reveals solutions vs excuses
+  {
+    id: 22,
+    text: "Students from your region perform poorly on national exams. You:",
+    options: [
+      { id: "a", text: "Invest in better teaching and infrastructure in your region.", scores: { S: 4, Ac: 4, K: 3 } },
+      { id: "b", text: "Argue that the exams are culturally biased and demand changes.", scores: { K: 3, A: 2, T: 1 } },
+      { id: "c", text: "Blame the government for underfunding your region's schools.", scores: { S: 2, T: 1, A: 2 } },
+      { id: "d", text: "Accept that your region needs to improve its educational culture.", scores: { T: 3, Ac: 3, S: 2 } },
+    ],
+  },
+  // Q23: Corruption in your community — reveals action vs acceptance
+  {
+    id: 23,
+    text: "You discover corruption in your community's leadership. You:",
+    options: [
+      { id: "a", text: "Expose it publicly and demand accountability.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Try to address it privately to avoid embarrassing the community.", scores: { S: 3, Ac: 3, T: 2 } },
+      { id: "c", text: "Accept it — corruption is everywhere, and your community needs stability.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Use the information to gain leverage for your own benefit.", scores: { A: 3, T: 0, Ac: 0, K: 2 } },
+    ],
+  },
+  // Q24: Intellectual dishonesty — reveals the core Intellectual trait
+  {
+    id: 24,
+    text: "You're at a dinner party and someone makes a factually incorrect claim that aligns with your political views. You:",
+    options: [
+      { id: "a", text: "Correct them — truth matters more than tribal loyalty.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Stay quiet — it's not worth correcting someone on your side.", scores: { T: 0, Ac: 0, A: 2 } },
+      { id: "c", text: "Use sophisticated arguments to defend their position, even though you know it's wrong.", scores: { T: 0, Ac: 0, K: 4 } },
+      { id: "d", text: "Privately correct them later to maintain the relationship.", scores: { T: 3, S: 3, Ac: 2 } },
+    ],
+  },
+  // Q25: Teaching controversial topics — reveals intellectual courage
+  {
+    id: 25,
+    text: "You're asked to teach a course where the evidence clearly supports one conclusion, but your audience believes the opposite. You:",
+    options: [
+      { id: "a", text: "Teach the evidence regardless of audience beliefs.", scores: { T: 4, K: 4, Ac: 3 } },
+      { id: "b", text: "Present both sides equally, even though one is clearly wrong.", scores: { T: 1, Ac: 1, K: 2 } },
+      { id: "c", text: "Frame the evidence in a way that supports what the audience already believes.", scores: { T: 0, Ac: 0, K: 3 } },
+      { id: "d", text: "Avoid the controversial parts and focus on uncontested material.", scores: { T: 2, Ac: 2, A: 1 } },
     ],
   },
 ];
@@ -478,14 +554,32 @@ export function computeScores(answers: Record<number, string>): AxisScores {
 export function classifyArchetype(scores: AxisScores): ArchetypeId {
   const { K, S, A, Ac, T } = scores;
 
+  // The Olodo: Low knowledge, low truthfulness, low accountability
   if (K < 30 && T < 25 && Ac < 25) return "olodo";
-  if (K > 50 && T < 30 && Ac < 30) return "intellectual"; // Smart but dishonest
+  
+  // The Intellectual: High knowledge but low truthfulness and accountability
+  // Smart but dishonest - uses education to justify lies, bigotry, corruption
+  if (K > 45 && T < 35 && Ac < 35) return "intellectual";
+  
+  // The Hustler: Low knowledge but high agency
   if (K < 30 && A > 50) return "hustler";
+  
+  // The Follower: Low knowledge and low agency
   if (K < 30 && A < 30) return "follower";
+  
+  // The Sage: High knowledge, high agency, high solidarity
   if (K > 50 && A > 50 && S > 50) return "sage";
+  
+  // The Builder: High knowledge, high agency, lower solidarity
   if (K > 50 && A > 50 && S < 40) return "builder";
+  
+  // The Critic: High knowledge but low agency
   if (K > 50 && A < 35) return "critic";
+  
+  // The Performer: High agency but low solidarity
   if (A > 50 && S < 30) return "performer";
+  
+  // The Skeptic: Everything else (default)
   return "skeptic";
 }
 

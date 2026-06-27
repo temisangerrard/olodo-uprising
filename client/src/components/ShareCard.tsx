@@ -19,9 +19,14 @@ import { ARCHETYPES, SOCIETY_DIMENSIONS, type ArchetypeId } from "@/lib/data";
 
 interface ShareCardProps {
   archetypeId: ArchetypeId;
+  revealingQuestions?: Array<{
+    id: number;
+    text: string;
+    chosenOption: string;
+  }>;
 }
 
-export default function ShareCard({ archetypeId }: ShareCardProps) {
+export default function ShareCard({ archetypeId, revealingQuestions }: ShareCardProps) {
   const cardRef = useRef<HTMLDivElement>(null);
   const [downloading, setDownloading] = useState(false);
   const [copied, setCopied] = useState(false);
@@ -56,7 +61,18 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
   }
 
   async function copyShareText() {
-    const text = `I took the Olodo Uprising assessment.\n\nI am: ${archetype.name}\n"${archetype.tagline}"\n\n10,000 of me in a city: ${archetype.society.verdict}\n\n#OlodoUprising — olodo-uprising.pages.dev`;
+    let text = `I took the Olodo Uprising assessment.\n\nI am: ${archetype.name}\n"${archetype.tagline}"\n\n10,000 of me in a city: ${archetype.society.verdict}`;
+    
+    // Add revealing questions for Intellectual archetype
+    if (archetypeId === "intellectual" && revealingQuestions && revealingQuestions.length > 0) {
+      text += `\n\nWhat revealed me:`;
+      revealingQuestions.slice(0, 2).forEach((q, idx) => {
+        text += `\n\nQ${q.id}: ${q.text}\n→ ${q.chosenOption}`;
+      });
+    }
+    
+    text += `\n\n#OlodoUprising — olodo-uprising.pages.dev`;
+    
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
@@ -64,6 +80,23 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
     } catch {
       // fallback: do nothing
     }
+  }
+
+  function shareToTwitter() {
+    let text = `I am ${archetype.name}.\n\n"${archetype.tagline}"\n\n10,000 of me in a city: ${archetype.society.verdict}`;
+    
+    // Add revealing questions for Intellectual archetype
+    if (archetypeId === "intellectual" && revealingQuestions && revealingQuestions.length > 0) {
+      text += `\n\nWhat revealed me:`;
+      revealingQuestions.slice(0, 2).forEach((q, idx) => {
+        text += `\n\nQ${q.id}: ${q.text}\n→ ${q.chosenOption}`;
+      });
+    }
+    
+    text += `\n\nWhat archetype are you? ↓\n\nolodo-uprising.pages.dev\n\n#OlodoUprising`;
+    
+    const url = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
   }
 
   return (
@@ -273,6 +306,27 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
       {/* Action buttons */}
       <div className="flex gap-3 flex-wrap">
         <button
+          onClick={shareToTwitter}
+          className="px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-150 active:scale-[0.97]"
+          style={{
+            background: "#000",
+            color: "#fff",
+            fontFamily: "'Space Grotesk', sans-serif",
+            borderRadius: "2px",
+            letterSpacing: "0.05em",
+            border: "1px solid oklch(1 0 0 / 0.2)",
+          }}
+          onMouseEnter={e => {
+            (e.currentTarget as HTMLElement).style.background = "oklch(0.20 0.01 260)";
+          }}
+          onMouseLeave={e => {
+            (e.currentTarget as HTMLElement).style.background = "#000";
+          }}
+        >
+          Share on 𝕏
+        </button>
+
+        <button
           onClick={downloadCard}
           disabled={downloading}
           className="px-5 py-2.5 text-xs font-semibold tracking-wide transition-all duration-150 active:scale-[0.97] disabled:opacity-60"
@@ -313,7 +367,7 @@ export default function ShareCard({ archetypeId }: ShareCardProps) {
             }
           }}
         >
-          {copied ? "Copied!" : "Copy Share Text"}
+          {copied ? "Copied!" : "Copy Text"}
         </button>
       </div>
 
