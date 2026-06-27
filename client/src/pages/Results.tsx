@@ -4,7 +4,7 @@
  * Archetype reveal + societal simulation radar chart + verdict
  */
 
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "wouter";
 import { motion, AnimatePresence } from "framer-motion";
 import {
@@ -23,6 +23,8 @@ import {
   type ArchetypeId,
   type AxisScores,
 } from "@/lib/data";
+import MixedSociety from "@/components/MixedSociety";
+import ShareCard from "@/components/ShareCard";
 
 // Typewriter hook
 function useTypewriter(text: string, speed = 60, startDelay = 0) {
@@ -507,6 +509,32 @@ export default function Results() {
                     );
                   })}
                 </div>
+              </motion.div>
+
+              {/* Share Card */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.55, ease: [0.23, 1, 0.32, 1] }}
+                className="mb-8"
+              >
+                <div
+                  className="text-xs font-mono tracking-widest uppercase mb-4"
+                  style={{ color: "oklch(0.55 0.01 260)", fontFamily: "'JetBrains Mono', monospace" }}
+                >
+                  Share Your Result
+                </div>
+                <ShareCard archetypeId={archetypeId} />
+              </motion.div>
+
+              {/* Mixed Society Simulator */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.65, ease: [0.23, 1, 0.32, 1] }}
+                className="mb-8"
+              >
+                <MixedSociety />
               </motion.div>
 
               {/* Actions */}
