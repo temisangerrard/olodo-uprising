@@ -35,6 +35,7 @@ export type ArchetypeId =
   | "follower"
   | "performer"
   | "skeptic"
+  | "intellectual"
   | "olodo";
 
 export interface SocietyProfile {
@@ -60,207 +61,208 @@ export interface Archetype {
 
 // ============================================================
 // QUESTION BANK (20 questions)
+// Nigerian cultural context, moral ambiguity, dramatic tension
 // ============================================================
 
 export const QUESTIONS: Question[] = [
   {
     id: 1,
-    text: "You hear something confidently stated by someone with millions of followers. What do you do?",
+    text: "Your uncle asks you to help him 'sort' a government contract. He says it's how things work here. You:",
     options: [
-      { id: "a", text: "Share it immediately — if that many people believe it, it's probably true.", scores: { K: 0, T: 0 } },
-      { id: "b", text: "Look it up before forming an opinion.", scores: { K: 3, T: 4 } },
-      { id: "c", text: "Ignore it — social media is mostly noise.", scores: { K: 2, T: 2 } },
-      { id: "d", text: "Argue against it just to be different.", scores: { K: 1, T: 1 } },
+      { id: "a", text: "Help him — family comes first, and this is how Nigeria works.", scores: { Ac: 0, S: 3, T: 1 } },
+      { id: "b", text: "Refuse — corruption starts with small compromises.", scores: { Ac: 4, T: 4 } },
+      { id: "c", text: "Find a legal way to help him without breaking rules.", scores: { K: 3, T: 3, S: 2 } },
+      { id: "d", text: "Help him but negotiate a cut for yourself.", scores: { Ac: 0, T: 0, A: 3 } },
     ],
   },
   {
     id: 2,
-    text: "A problem appears in your community — bad roads, dirty streets, broken infrastructure. Your first instinct is:",
+    text: "An elder in your community says something factually wrong at a gathering. Everyone nods respectfully. You:",
     options: [
-      { id: "a", text: "Post about it online and tag the government.", scores: { A: 1, Ac: 2 } },
-      { id: "b", text: "Organise neighbours to fix it ourselves.", scores: { A: 4, Ac: 4, S: 4 } },
-      { id: "c", text: "Complain to friends and move on.", scores: { A: 0, Ac: 1 } },
-      { id: "d", text: "Wait — someone will handle it eventually.", scores: { A: 0, Ac: 0 } },
+      { id: "a", text: "Stay quiet — respect for elders is non-negotiable.", scores: { S: 2, T: 0, A: 0 } },
+      { id: "b", text: "Correct them publicly — truth matters more than hierarchy.", scores: { T: 4, A: 4, S: 0 } },
+      { id: "c", text: "Speak to them privately after the gathering.", scores: { T: 3, S: 3, A: 2 } },
+      { id: "d", text: "Use their mistake to make yourself look smarter.", scores: { T: 0, Ac: 0, A: 3 } },
     ],
   },
   {
     id: 3,
-    text: "You are wrong about something important. How do you respond?",
+    text: "You discover a way to make quick money through a scheme that technically isn't illegal but hurts others. You:",
     options: [
-      { id: "a", text: "Admit it openly and update my view.", scores: { T: 4, Ac: 4 } },
-      { id: "b", text: "Quietly change my position without acknowledging it.", scores: { T: 2, Ac: 2 } },
-      { id: "c", text: "Double down — changing your mind looks weak.", scores: { T: 0, Ac: 0 } },
-      { id: "d", text: "Blame whoever gave me the wrong information.", scores: { T: 1, Ac: 0 } },
+      { id: "a", text: "Take it — if it's not illegal, it's not wrong. Everyone is doing something similar.", scores: { Ac: 0, T: 0, A: 3 } },
+      { id: "b", text: "Decline — the harm to others outweighs the gain.", scores: { Ac: 4, T: 4, S: 3 } },
+      { id: "c", text: "Find a way to benefit while minimising harm.", scores: { K: 2, T: 2, Ac: 2 } },
+      { id: "d", text: "Expose the scheme publicly to prevent others from doing it.", scores: { T: 4, S: 4, A: 3 } },
     ],
   },
   {
     id: 4,
-    text: "Someone more qualified than you disagrees with your opinion. You:",
+    text: "Your friend posts misinformation on social media. It's getting thousands of shares. You:",
     options: [
-      { id: "a", text: "Listen carefully — they might know something I don't.", scores: { K: 4, T: 4 } },
-      { id: "b", text: "Defend my position — qualifications don't mean everything.", scores: { K: 1, T: 1 } },
-      { id: "c", text: "Pretend to agree but privately dismiss them.", scores: { T: 0, Ac: 1 } },
-      { id: "d", text: "Ask them to explain their reasoning.", scores: { K: 3, T: 3 } },
+      { id: "a", text: "Call them out publicly — they need to face consequences.", scores: { T: 3, A: 4, S: 1 } },
+      { id: "b", text: "Message them privately with the correct information.", scores: { T: 4, S: 3, Ac: 3 } },
+      { id: "c", text: "Say nothing — it's not your fight.", scores: { S: 1, A: 0, T: 0 } },
+      { id: "d", text: "Use the moment to post your own 'correct' take and gain followers.", scores: { T: 1, Ac: 0, A: 4 } },
     ],
   },
   {
     id: 5,
-    text: "You have a chance to earn money quickly through a shortcut that isn't quite legal. You:",
+    text: "You're in a debate and you realise you're wrong. But your argument is winning the crowd. You:",
     options: [
-      { id: "a", text: "Take it — everyone does it and the system is rigged anyway.", scores: { Ac: 0, S: 1 } },
-      { id: "b", text: "Decline — the risk isn't worth it.", scores: { Ac: 3 } },
-      { id: "c", text: "Think carefully and only proceed if the harm is minimal.", scores: { T: 3, Ac: 3 } },
-      { id: "d", text: "Report it — shortcuts like this hurt everyone.", scores: { S: 4, Ac: 4 } },
+      { id: "a", text: "Admit you're wrong immediately — truth over ego.", scores: { T: 4, Ac: 4 } },
+      { id: "b", text: "Keep going — the crowd doesn't know the difference and you're making a point.", scores: { T: 0, Ac: 0, A: 3 } },
+      { id: "c", text: "Pivot subtly — acknowledge a minor flaw but maintain your position.", scores: { T: 1, Ac: 1, K: 2 } },
+      { id: "d", text: "Double down with more sophisticated arguments — they'll never know.", scores: { T: 0, Ac: 0, K: 3 } },
     ],
   },
   {
     id: 6,
-    text: "A young person asks you for career advice. You say:",
+    text: "A qualified person loses a job to someone less qualified but better connected. You:",
     options: [
-      { id: "a", text: "\"Follow the money — skills don't matter as much as hustle.\"", scores: { K: 0, S: 2 } },
-      { id: "b", text: "\"Build real skills first, then monetise them.\"", scores: { K: 4, S: 4 } },
-      { id: "c", text: "\"Do what makes you happy.\"", scores: { K: 1, S: 3 } },
-      { id: "d", text: "\"Watch what successful people do and copy it.\"", scores: { K: 1, A: 2 } },
+      { id: "a", text: "Speak up — merit should matter more than connections.", scores: { T: 4, A: 4, S: 2 } },
+      { id: "b", text: "Accept it — this is how Nigeria works. Connections are part of the game.", scores: { T: 1, A: 1, S: 2 } },
+      { id: "c", text: "Use your own connections to help the qualified person elsewhere.", scores: { K: 2, S: 3, A: 3 } },
+      { id: "d", text: "Build better connections so you can benefit from the same system.", scores: { Ac: 1, A: 4, T: 0 } },
     ],
   },
   {
     id: 7,
-    text: "You disagree with a widely held belief in your community. You:",
+    text: "You have the skills to build something valuable but it requires years of slow, unglamorous work. You:",
     options: [
-      { id: "a", text: "Keep quiet — it's not worth the conflict.", scores: { A: 0, T: 1 } },
-      { id: "b", text: "Speak up respectfully with evidence.", scores: { A: 3, T: 4 } },
-      { id: "c", text: "Loudly oppose it — people need to hear the truth.", scores: { A: 4, T: 2 } },
-      { id: "d", text: "Find others who agree with you first.", scores: { A: 2, S: 2 } },
+      { id: "a", text: "Commit to the long path — real value takes time.", scores: { K: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Find a faster way to monetise your skills first, then build slowly.", scores: { A: 4, K: 2, Ac: 2 } },
+      { id: "c", text: "Look for shortcuts — if others are cutting corners, you can't afford to be slow.", scores: { Ac: 0, A: 3, K: 1 } },
+      { id: "d", text: "Talk about building it instead — the vision is valuable even if you don't execute.", scores: { K: 1, A: 2, Ac: 0 } },
     ],
   },
   {
     id: 8,
-    text: "How do you feel about people who are more educated than you?",
+    text: "Your community is divided along ethnic lines. Your ethnic group is being favoured. You:",
     options: [
-      { id: "a", text: "Respect — they put in the work.", scores: { K: 4, S: 3 } },
-      { id: "b", text: "Suspicious — education can make people arrogant.", scores: { K: 1, T: 1 } },
-      { id: "c", text: "Indifferent — education doesn't equal wisdom.", scores: { K: 2 } },
-      { id: "d", text: "Competitive — I want to learn more than them.", scores: { K: 3, A: 3 } },
+      { id: "a", text: "Speak against the favouritism — fairness matters more than tribe.", scores: { T: 4, S: 4, Ac: 4 } },
+      { id: "b", text: "Accept the advantage — this is how politics works here.", scores: { T: 0, S: 2, Ac: 0 } },
+      { id: "c", text: "Use the advantage quietly while advocating for fairness in principle.", scores: { T: 1, Ac: 1, A: 3 } },
+      { id: "d", text: "Leverage it to build power so you can help your people later.", scores: { T: 0, Ac: 1, A: 4 } },
     ],
   },
   {
     id: 9,
-    text: "Your city has a major public health crisis. You:",
+    text: "You're offered a lucrative contract that requires you to publicly support a policy you know is harmful. You:",
     options: [
-      { id: "a", text: "Follow official guidance and encourage others to do the same.", scores: { K: 3, S: 4, T: 3 } },
-      { id: "b", text: "Research it yourself and form your own conclusions.", scores: { K: 4, T: 4 } },
-      { id: "c", text: "Trust that it'll work itself out.", scores: { A: 0, K: 0 } },
-      { id: "d", text: "Share everything you've heard — people deserve to know.", scores: { T: 1, S: 2 } },
+      { id: "a", text: "Decline — your integrity isn't for sale.", scores: { T: 4, Ac: 4 } },
+      { id: "b", text: "Take it — you can do more good with the money than without it.", scores: { T: 1, Ac: 1, A: 3 } },
+      { id: "c", text: "Negotiate — support it publicly but work to minimise the harm privately.", scores: { T: 2, Ac: 2, K: 3 } },
+      { id: "d", text: "Take it and use the platform to subtly undermine the policy.", scores: { T: 2, Ac: 2, A: 4 } },
     ],
   },
   {
     id: 10,
-    text: "You build something — a business, a project, a skill. It fails. You:",
+    text: "A young person asks you for advice. You know the honest answer is 'work hard for years' but they want a shortcut. You:",
     options: [
-      { id: "a", text: "Analyse what went wrong and try again.", scores: { Ac: 4, K: 3 } },
-      { id: "b", text: "Blame external factors — the environment wasn't right.", scores: { Ac: 0 } },
-      { id: "c", text: "Give up — maybe it wasn't meant to be.", scores: { A: 0, Ac: 1 } },
-      { id: "d", text: "Pivot immediately to something else without reflection.", scores: { A: 3, Ac: 1 } },
+      { id: "a", text: "Tell them the truth — there are no shortcuts to real success.", scores: { T: 4, K: 4, S: 2 } },
+      { id: "b", text: "Give them the shortcut — they'll learn from experience.", scores: { T: 1, S: 3, Ac: 1 } },
+      { id: "c", text: "Tell them what they want to hear — they'll figure it out eventually.", scores: { T: 0, Ac: 0, S: 2 } },
+      { id: "d", text: "Sell them a course on the shortcut — if they're not going to listen, at least profit from it.", scores: { T: 0, Ac: 0, A: 4 } },
     ],
   },
   {
     id: 11,
-    text: "When you consume content online, you mostly look for:",
+    text: "You witness corruption in your workplace. Reporting it could cost you your job. You:",
     options: [
-      { id: "a", text: "Entertainment — I need to decompress.", scores: { K: 1 } },
-      { id: "b", text: "Information that challenges my thinking.", scores: { K: 4, T: 4 } },
-      { id: "c", text: "Validation that my views are correct.", scores: { T: 0, K: 0 } },
-      { id: "d", text: "Practical knowledge I can use immediately.", scores: { K: 3, A: 3 } },
+      { id: "a", text: "Report it — some things matter more than a paycheck.", scores: { T: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Document it quietly and use it as leverage if needed.", scores: { T: 1, Ac: 1, A: 4 } },
+      { id: "c", text: "Look for another job — you can't fight the system alone.", scores: { T: 2, A: 2, S: 1 } },
+      { id: "d", text: "Join in — if everyone is doing it, you might as well benefit.", scores: { T: 0, Ac: 0, S: 2 } },
     ],
   },
   {
     id: 12,
-    text: "Someone in your circle is spreading misinformation. You:",
+    text: "Someone with less education than you is making a valid point in a discussion. You:",
     options: [
-      { id: "a", text: "Correct them privately with facts.", scores: { T: 4, S: 3 } },
-      { id: "b", text: "Call them out publicly.", scores: { T: 3, A: 3 } },
-      { id: "c", text: "Say nothing — it's not my business.", scores: { S: 1, A: 0 } },
-      { id: "d", text: "Agree with them to avoid conflict.", scores: { T: 0, Ac: 0 } },
+      { id: "a", text: "Acknowledge their point — wisdom isn't limited to the educated.", scores: { T: 4, S: 4, K: 3 } },
+      { id: "b", text: "Listen but respond with more sophisticated arguments to show your expertise.", scores: { T: 2, K: 3, Ac: 1 } },
+      { id: "c", text: "Dismiss them subtly — they don't understand the complexity.", scores: { T: 1, K: 2, S: 0 } },
+      { id: "d", text: "Use their lack of education to undermine their entire argument.", scores: { T: 0, Ac: 0, K: 2 } },
     ],
   },
   {
     id: 13,
-    text: "How do you define success?",
+    text: "You can make a lot of money by selling a product you know is mediocre. You:",
     options: [
-      { id: "a", text: "Wealth and status.", scores: { K: 1, S: 1 } },
-      { id: "b", text: "Impact — changing something for the better.", scores: { S: 4, K: 3 } },
-      { id: "c", text: "Freedom to do what I want.", scores: { A: 3 } },
-      { id: "d", text: "Respect from people I genuinely admire.", scores: { S: 3, T: 2 } },
+      { id: "a", text: "Don't sell it — your reputation matters more than quick money.", scores: { Ac: 4, T: 4, K: 3 } },
+      { id: "b", text: "Sell it but be transparent about its limitations.", scores: { T: 3, Ac: 3, A: 3 } },
+      { id: "c", text: "Sell it and emphasise the positives — everyone does this.", scores: { T: 1, Ac: 1, A: 4 } },
+      { id: "d", text: "Overpromise and deliver the minimum — they'll blame themselves for expecting more.", scores: { T: 0, Ac: 0, A: 4 } },
     ],
   },
   {
     id: 14,
-    text: "A new technology could solve a major problem but requires everyone to change their habits. You:",
+    text: "Your family expects you to follow a traditional path. You want something different. You:",
     options: [
-      { id: "a", text: "Adopt it early and encourage others.", scores: { A: 4, S: 4, K: 3 } },
-      { id: "b", text: "Wait to see if it actually works.", scores: { K: 2, T: 3 } },
-      { id: "c", text: "Resist — change usually causes more problems.", scores: { A: 0, K: 1 } },
-      { id: "d", text: "Ignore it — someone else will figure it out.", scores: { A: 0, S: 1 } },
+      { id: "a", text: "Follow your own path — your life is yours to live.", scores: { A: 4, T: 3, Ac: 3 } },
+      { id: "b", text: "Compromise — find a way to honour them while pursuing your goal.", scores: { S: 3, A: 3, T: 2 } },
+      { id: "c", text: "Follow their path — family respect is non-negotiable.", scores: { S: 4, A: 0, T: 1 } },
+      { id: "d", text: "Tell them you're following your path but secretly rely on their support.", scores: { A: 2, Ac: 0, T: 1 } },
     ],
   },
   {
     id: 15,
-    text: "You are given power over a community for one year. Your first priority is:",
+    text: "You're in a position of power. Someone offers you a gift in exchange for a favour. It's a small favour. You:",
     options: [
-      { id: "a", text: "Fix the most visible problems quickly.", scores: { A: 4, K: 2 } },
-      { id: "b", text: "Understand the root causes before acting.", scores: { K: 4, T: 4 } },
-      { id: "c", text: "Build systems that outlast my tenure.", scores: { K: 4, S: 4, Ac: 4 } },
-      { id: "d", text: "Reward the people who supported me.", scores: { S: 1, Ac: 0 } },
+      { id: "a", text: "Refuse — even small favours corrupt the system.", scores: { Ac: 4, T: 4 } },
+      { id: "b", text: "Accept the gift but don't do the favour — you're not corrupt.", scores: { Ac: 1, T: 2, A: 2 } },
+      { id: "c", text: "Accept both — the favour is small and everyone does it.", scores: { Ac: 0, T: 0, S: 2 } },
+      { id: "d", text: "Accept the gift and do the favour, but justify it as 'helping someone'.", scores: { Ac: 0, T: 0, A: 3 } },
     ],
   },
   {
     id: 16,
-    text: "How do you handle criticism of your work?",
+    text: "You see someone being praised for something they didn't actually do. You:",
     options: [
-      { id: "a", text: "Take it seriously and improve.", scores: { Ac: 4, K: 3 } },
-      { id: "b", text: "Defend my work — critics don't understand my vision.", scores: { Ac: 0, T: 1 } },
-      { id: "c", text: "Ignore it unless it comes from someone I respect.", scores: { T: 2, Ac: 2 } },
-      { id: "d", text: "Feel hurt but eventually reflect on it.", scores: { Ac: 3, T: 3 } },
+      { id: "a", text: "Speak up — false praise harms everyone.", scores: { T: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Stay quiet — it's not your problem.", scores: { T: 1, A: 0, S: 1 } },
+      { id: "c", text: "Use the moment to position yourself as the real contributor.", scores: { T: 1, Ac: 0, A: 4 } },
+      { id: "d", text: "Congratulate them publicly, then correct the record privately.", scores: { T: 2, S: 3, Ac: 2 } },
     ],
   },
   {
     id: 17,
-    text: "You see someone being publicly humiliated online for being wrong. You:",
+    text: "A policy you strongly oppose is popular with most people. You:",
     options: [
-      { id: "a", text: "Join in — they should have known better.", scores: { S: 0, T: 1 } },
-      { id: "b", text: "Defend them — public humiliation solves nothing.", scores: { S: 4, T: 3 } },
-      { id: "c", text: "Stay out of it.", scores: { S: 2, A: 0 } },
-      { id: "d", text: "Privately message them with correct information.", scores: { S: 4, T: 4 } },
+      { id: "a", text: "Speak against it with evidence — popularity doesn't make something right.", scores: { T: 4, A: 4, K: 3 } },
+      { id: "b", text: "Accept it — democracy means accepting the majority view.", scores: { S: 3, T: 2, A: 1 } },
+      { id: "c", text: "Stay quiet but vote against it.", scores: { T: 2, A: 1, S: 2 } },
+      { id: "d", text: "Publicly support it while privately working to undermine it.", scores: { T: 0, Ac: 0, A: 4 } },
     ],
   },
   {
     id: 18,
-    text: "What is your honest view of formal education?",
+    text: "You have the opportunity to exaggerate your qualifications to get a job you're almost qualified for. You:",
     options: [
-      { id: "a", text: "Mostly useless — real learning happens in the streets.", scores: { K: 0 } },
-      { id: "b", text: "Valuable but not the only path to knowledge.", scores: { K: 3, T: 3 } },
-      { id: "c", text: "Essential — you can't build without foundations.", scores: { K: 4 } },
-      { id: "d", text: "A credential game — I play it but don't believe in it.", scores: { K: 1, T: 2 } },
+      { id: "a", text: "Don't exaggerate — if you don't get it, you don't deserve it.", scores: { Ac: 4, T: 4 } },
+      { id: "b", text: "Emphasise your strengths honestly — let them decide.", scores: { T: 3, Ac: 3, A: 2 } },
+      { id: "c", text: "Add a small exaggeration — everyone does this.", scores: { T: 1, Ac: 1, A: 3 } },
+      { id: "d", text: "Lie boldly — you'll figure out the rest once you're in.", scores: { T: 0, Ac: 0, A: 4 } },
     ],
   },
   {
     id: 19,
-    text: "When making a major decision, you:",
+    text: "Your community needs a leader. The most qualified person is unpopular. The most popular person is unqualified. You support:",
     options: [
-      { id: "a", text: "Go with your gut — overthinking kills momentum.", scores: { K: 1, T: 1 } },
-      { id: "b", text: "Gather information, consult experts, then decide.", scores: { K: 4, T: 4, A: 3 } },
-      { id: "c", text: "Ask people around you what they think.", scores: { S: 3, A: 2 } },
-      { id: "d", text: "Do what worked before.", scores: { K: 2, A: 2 } },
+      { id: "a", text: "The qualified person — competence matters more than popularity.", scores: { K: 4, T: 4, S: 2 } },
+      { id: "b", text: "The popular person — they can learn and they have the people's trust.", scores: { S: 4, T: 1, A: 2 } },
+      { id: "c", text: "Neither — find a compromise candidate.", scores: { S: 3, T: 2, A: 2 } },
+      { id: "d", text: "Whoever will advance your interests.", scores: { Ac: 0, T: 0, A: 4 } },
     ],
   },
   {
     id: 20,
-    text: "What does your community owe you?",
+    text: "You can make a difference in your community, but it requires sacrificing your personal comfort. You:",
     options: [
-      { id: "a", text: "Nothing — I build my own path.", scores: { A: 4, Ac: 4 } },
-      { id: "b", text: "Opportunity — I'll do the rest.", scores: { A: 3, S: 3 } },
-      { id: "c", text: "Support — we rise together.", scores: { S: 4, Ac: 3 } },
-      { id: "d", text: "Everything — I was born into this, they owe me.", scores: { Ac: 0, S: 0 } },
+      { id: "a", text: "Make the sacrifice — the community needs you.", scores: { S: 4, Ac: 4, A: 3 } },
+      { id: "b", text: "Find a way to help without sacrificing too much.", scores: { S: 3, A: 3, Ac: 2 } },
+      { id: "c", text: "Focus on your own success first — you can help later.", scores: { A: 3, S: 1, Ac: 1 } },
+      { id: "d", text: "Talk about helping but don't actually do it — the intention counts.", scores: { S: 1, Ac: 0, A: 2 } },
     ],
   },
 ];
@@ -285,9 +287,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 70,
       cohesion: 65,
       resilience: 82,
-      verdict: "A society that gets things done.",
+      verdict: "10,000 Builders = Industrialised Nigeria in a decade.",
       verdictDetail:
-        "Infrastructure improves. Problems get solved. Innovation compounds. The risk: builders sometimes treat people like projects. Efficiency is prioritised over empathy, and those who can't keep up get left behind.",
+        "Roads get fixed. Power plants get built. Factories rise. The society moves like Dangote's empire — relentless execution, visible results, infrastructure that compounds. But builders treat people like metrics. Empathy is a luxury. Those who can't keep up get paved over. The society is productive but cold.",
     },
   },
   sage: {
@@ -305,9 +307,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 80,
       cohesion: 78,
       resilience: 88,
-      verdict: "A society of extraordinary depth.",
+      verdict: "10,000 Sages = A society that debates brilliantly while the house burns.",
       verdictDetail:
-        "Schools flourish. Institutions are trusted. Decisions are made with care. The risk: too much deliberation, not enough urgency. A society of sages can debate a burning building while it burns.",
+        "Universities become world-class. Research output explodes. Every policy is rigorously analysed. But nothing gets done fast. A society of sages will write 47 white papers on fixing the power grid while the country stays dark. Depth without urgency. Wisdom without action. The smartest society that never quite arrives.",
     },
   },
   critic: {
@@ -325,9 +327,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 55,
       cohesion: 40,
       resilience: 50,
-      verdict: "A society that knows exactly what's wrong.",
+      verdict: "10,000 Critics = A nation of Twitter threads that change nothing.",
       verdictDetail:
-        "Brilliant essays are written. Diagnoses are impeccable. Nothing gets fixed. The critics are always right and always watching — but the building still crumbles because no one picks up a hammer.",
+        "Every newspaper column is devastating. Every Twitter thread is viral. Every diagnosis is surgically precise. But no one picks up a hammer. The critics are always right and always watching — and the building crumbles around them because critique replaced construction. A society that knows exactly what's wrong and does nothing about it.",
     },
   },
   hustler: {
@@ -345,9 +347,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 20,
       cohesion: 30,
       resilience: 40,
-      verdict: "A society of motion without direction.",
+      verdict: "10,000 Hustlers = Lagos on steroids — money moves, nothing gets built.",
       verdictDetail:
-        "Lots of activity. Lots of noise. Some people get very rich, very fast. Most get left behind. Institutions are weak because no one has time to build them. The economy booms and crashes in cycles no one can predict.",
+        "The hustle never stops. Markets are chaotic, deals are everywhere, someone is always making money. But there are no institutions, no long-term infrastructure, no systems. The economy booms and crashes in cycles. Everyone is moving, no one knows where. A society of pure motion without direction.",
     },
   },
   follower: {
@@ -365,9 +367,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 25,
       cohesion: 55,
       resilience: 20,
-      verdict: "A society that is easy to lead — and easy to exploit.",
+      verdict: "10,000 Followers = A society waiting for a strongman to tell it what to do.",
       verdictDetail:
-        "Whoever controls the narrative controls everything. The community is harmonious on the surface. But it is deeply vulnerable to demagogues, misinformation, and authoritarian leadership. Compliance is mistaken for consensus.",
+        "Harmonious on the surface. Deeply vulnerable underneath. Whoever controls the narrative controls everything. The community follows the loudest voice, the most charismatic leader, the strongest man. Compliance is mistaken for consensus. A society that is easy to lead — and easy to exploit.",
     },
   },
   performer: {
@@ -385,9 +387,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 30,
       cohesion: 45,
       resilience: 35,
-      verdict: "A society of spectacle.",
+      verdict: "10,000 Performers = Nollywood meets Instagram — entertaining, shallow, bankrupt.",
       verdictDetail:
-        "Incredibly entertaining. Deeply shallow. The attention economy thrives. The loudest voice wins, not the wisest one. Leaders are chosen for charisma. Institutions are theatre. The show must go on — even when the house is on fire.",
+        "Incredibly entertaining. Deeply hollow. The attention economy thrives. The loudest voice wins, not the wisest one. Leaders are chosen for charisma. Institutions are theatre. Everyone is performing, no one is building. The show must go on — even when the house is on fire.",
     },
   },
   skeptic: {
@@ -405,9 +407,29 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 45,
       cohesion: 35,
       resilience: 60,
-      verdict: "A society that trusts nothing and no one.",
+      verdict: "10,000 Skeptics = A society that can't be conned but also can't agree on anything.",
       verdictDetail:
-        "Hard to manipulate, but also hard to organise. Progress is slow because consensus is impossible. Every institution is questioned. Every leader is suspected. The society is resilient against external threats but paralysed by internal distrust.",
+        "Hard to manipulate, but also hard to organise. Progress is slow because consensus is impossible. Every institution is questioned. Every leader is suspected. The society is resilient against external threats but paralysed by internal distrust. Nothing gets built because no one trusts anyone enough to collaborate.",
+    },
+  },
+  intellectual: {
+    id: "intellectual",
+    name: "The Intellectual",
+    tagline: "I can argue either side.",
+    description:
+      "You are articulate, well-read, and capable of constructing brilliant arguments for any position — including ones you don't believe. You use knowledge as a weapon, not a compass. You know the truth but you also know how to obscure it. This makes you dangerous.",
+    traits: ["Articulate", "Strategic", "Dishonest", "Persuasive"],
+    color: "text-violet-400",
+    accentHex: "#a78bfa",
+    society: {
+      education: 65,
+      economy: 40,
+      governance: 25,
+      cohesion: 30,
+      resilience: 45,
+      verdict: "10,000 Intellectuals = A society of beautiful lies.",
+      verdictDetail:
+        "The courts are full. The newspapers are eloquent. The debates are dazzling. But nothing is resolved because every fact has a counter-argument, every truth has a paid defender of its opposite. Justice becomes a performance. Policy becomes theatre. The society is intellectually sophisticated and morally bankrupt. Lawyers are the highest caste. Truth is whatever you can afford to argue.",
     },
   },
   olodo: {
@@ -425,9 +447,9 @@ export const ARCHETYPES: Record<ArchetypeId, Archetype> = {
       governance: 10,
       cohesion: 35,
       resilience: 12,
-      verdict: "A society that burns bright and fast.",
+      verdict: "10,000 Olodos = A society that burns bright and fast.",
       verdictDetail:
-        "Entertaining to watch from outside. Devastating to live in. Schools collapse from disinterest. Expertise is mocked. Leaders are elected on charisma and confidence alone. Accountability is near zero. The society cannot handle any serious crisis — it has no tools to do so.",
+        "Entertaining to watch from outside. Devastating to live in. Schools collapse from disinterest. Expertise is mocked. Leaders are elected on charisma and confidence alone. Accountability is near zero. The society cannot handle any serious crisis — it has no tools to do so. A society that is its own worst enemy.",
     },
   },
 };
@@ -457,6 +479,7 @@ export function classifyArchetype(scores: AxisScores): ArchetypeId {
   const { K, S, A, Ac, T } = scores;
 
   if (K < 30 && T < 25 && Ac < 25) return "olodo";
+  if (K > 50 && T < 30 && Ac < 30) return "intellectual"; // Smart but dishonest
   if (K < 30 && A > 50) return "hustler";
   if (K < 30 && A < 30) return "follower";
   if (K > 50 && A > 50 && S > 50) return "sage";
