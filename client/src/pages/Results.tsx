@@ -27,6 +27,7 @@ import {
 } from "@/lib/data";
 import MixedSociety from "@/components/MixedSociety";
 import ShareCard from "@/components/ShareCard";
+import TwitterVerify from "@/components/TwitterVerify";
 
 // Typewriter hook
 function useTypewriter(text: string, speed = 60, startDelay = 0) {
@@ -575,6 +576,16 @@ export default function Results() {
                   </div>
                 </motion.div>
               )}
+
+              {/* Twitter Verification */}
+              <motion.div
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.54, ease: [0.23, 1, 0.32, 1] }}
+                className="mb-8"
+              >
+                <TwitterVerify quizArchetypeId={archetypeId} accentHex={archetype.accentHex} />
+              </motion.div>
 
               {/* Share Card */}
               <motion.div
