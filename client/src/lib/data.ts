@@ -71,10 +71,10 @@ export const QUESTIONS: Question[] = [
     id: 1,
     text: "A student is accused of blasphemy and killed by a mob. Your religious leaders say the killing was 'understandable.' You:",
     options: [
-      { id: "a", text: "Condemn the killing publicly, regardless of your faith.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "a", text: "Write sophisticated arguments about 'religious sensitivity' that implicitly justify the mob.", scores: { K: 4, T: 0, Ac: 0 } },
       { id: "b", text: "Stay quiet — speaking out puts you at risk.", scores: { A: 2, T: 0, Ac: 0 } },
-      { id: "c", text: "Write sophisticated arguments about 'religious sensitivity' that implicitly justify the mob.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Share angry posts but don't actually do anything concrete.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "c", text: "Share angry posts but don't actually do anything concrete.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "d", text: "Condemn the killing publicly, regardless of your faith.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q2: Ethnic hiring — reveals merit vs tribal loyalty
@@ -82,10 +82,10 @@ export const QUESTIONS: Question[] = [
     id: 2,
     text: "You're hiring. A qualified candidate from your ethnic group is available, but there's a better candidate from a different group. You:",
     options: [
-      { id: "a", text: "Hire the best candidate, regardless of ethnicity.", scores: { T: 4, Ac: 4, K: 2 } },
-      { id: "b", text: "Hire your ethnic kin — they'll understand the culture better.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Create a sophisticated justification for why your ethnic candidate is actually better.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Delay the decision and hope someone else makes it for you.", scores: { A: 2, T: 1, S: 1 } },
+      { id: "a", text: "Delay the decision and hope someone else makes it for you.", scores: { A: 2, T: 1, S: 1 } },
+      { id: "b", text: "Create a sophisticated justification for why your ethnic candidate is actually better.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Hire the best candidate, regardless of ethnicity.", scores: { T: 4, Ac: 4, K: 2 } },
+      { id: "d", text: "Hire your ethnic kin — they'll understand the culture better.", scores: { A: 3, T: 0, Ac: 0 } },
     ],
   },
   // Q3: Corruption compromise — reveals integrity vs pragmatism
@@ -93,10 +93,10 @@ export const QUESTIONS: Question[] = [
     id: 3,
     text: "A politician offers you funding for your community project, but the money comes from corruption. You:",
     options: [
-      { id: "a", text: "Refuse — dirty money corrupts the project.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Accept it — the community needs this, and you can do good with the money.", scores: { A: 3, S: 3, T: 1 } },
+      { id: "a", text: "Accept it — the community needs this, and you can do good with the money.", scores: { A: 3, S: 3, T: 1 } },
+      { id: "b", text: "Publicly condemn corruption but privately take the money.", scores: { T: 0, Ac: 0, A: 3 } },
       { id: "c", text: "Accept it and write op-eds defending the politician's 'generosity.'", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Publicly condemn corruption but privately take the money.", scores: { T: 0, Ac: 0, A: 3 } },
+      { id: "d", text: "Refuse — dirty money corrupts the project.", scores: { T: 4, Ac: 4, S: 2 } },
     ],
   },
   // Q4: Religious bigotry in politics — reveals principle vs voting bloc
@@ -104,9 +104,9 @@ export const QUESTIONS: Question[] = [
     id: 4,
     text: "A presidential candidate from your religion makes openly bigoted statements against other faiths. Your religious leaders endorse them. You:",
     options: [
-      { id: "a", text: "Vote against them and speak out against the bigotry.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Vote for them anyway — religious solidarity matters more.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Write nuanced pieces about 'understanding both sides' without condemning the bigotry.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "a", text: "Vote for them anyway — religious solidarity matters more.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Write nuanced pieces about 'understanding both sides' without condemning the bigotry.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Vote against them and speak out against the bigotry.", scores: { T: 4, Ac: 4, S: 3 } },
       { id: "d", text: "Don't vote — all politicians are the same.", scores: { T: 1, A: 2, S: 1 } },
     ],
   },
@@ -115,10 +115,10 @@ export const QUESTIONS: Question[] = [
     id: 5,
     text: "A viral video shows your ethnic group attacking another group. Later, evidence emerges the video was doctored. You:",
     options: [
-      { id: "a", text: "Publicly correct the record and apologize for sharing it.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Quietly delete your posts without acknowledging the error.", scores: { T: 1, Ac: 1, A: 2 } },
-      { id: "c", text: "Argue that even if doctored, it 'reflects underlying truths.'", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Share the debunking but also share 'concerns' about the other group.", scores: { T: 1, A: 2, K: 2 } },
+      { id: "a", text: "Quietly delete your posts without acknowledging the error.", scores: { T: 1, Ac: 1, A: 2 } },
+      { id: "b", text: "Argue that even if doctored, it 'reflects underlying truths.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Share the debunking but also share 'concerns' about the other group.", scores: { T: 1, A: 2, K: 2 } },
+      { id: "d", text: "Publicly correct the record and apologize for sharing it.", scores: { T: 4, Ac: 4, S: 2 } },
     ],
   },
   // Q6: Expertise for hire — reveals intellectual honesty
@@ -126,10 +126,10 @@ export const QUESTIONS: Question[] = [
     id: 6,
     text: "You're an expert. A group pays you to produce research supporting their position, which you know is wrong. You:",
     options: [
-      { id: "a", text: "Decline — your expertise has ethical limits.", scores: { T: 4, Ac: 4, K: 2 } },
-      { id: "b", text: "Accept the money and produce the best case you can for their position.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "a", text: "Accept the money and produce the best case you can for their position.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "b", text: "Accept and donate the money to charity — you're still doing good.", scores: { A: 3, S: 2, T: 1 } },
       { id: "c", text: "Accept but water down the conclusions to be less misleading.", scores: { T: 2, Ac: 2, K: 2 } },
-      { id: "d", text: "Accept and donate the money to charity — you're still doing good.", scores: { A: 3, S: 2, T: 1 } },
+      { id: "d", text: "Decline — your expertise has ethical limits.", scores: { T: 4, Ac: 4, K: 2 } },
     ],
   },
   // Q7: Criticizing successful people — reveals economic hypocrisy
@@ -137,9 +137,9 @@ export const QUESTIONS: Question[] = [
     id: 7,
     text: "A young entrepreneur who dropped out of university becomes a billionaire. You're a educated professional struggling financially. You:",
     options: [
-      { id: "a", text: "Acknowledge their success and learn from their approach.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "a", text: "Write sophisticated analyses of why their success is 'problematic.'", scores: { K: 4, T: 0, Ac: 0 } },
       { id: "b", text: "Criticize them — they got lucky or did something unethical.", scores: { K: 2, T: 0, Ac: 0, A: 2 } },
-      { id: "c", text: "Write sophisticated analyses of why their success is 'problematic.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Acknowledge their success and learn from their approach.", scores: { T: 4, Ac: 4, S: 2 } },
       { id: "d", text: "Ignore them — focus on your own career.", scores: { A: 2, T: 1, S: 1 } },
     ],
   },
@@ -148,10 +148,10 @@ export const QUESTIONS: Question[] = [
     id: 8,
     text: "Members of your ethnic group are attacked. Your community demands revenge against innocent people from another group. You:",
     options: [
-      { id: "a", text: "Condemn revenge and demand justice through proper channels.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Support revenge — your people need to defend themselves.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Write sophisticated justifications for why revenge is 'understandable.'", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Stay quiet — speaking out makes you a target from both sides.", scores: { A: 2, T: 0, S: 1 } },
+      { id: "a", text: "Support revenge — your people need to defend themselves.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Stay quiet — speaking out makes you a target from both sides.", scores: { A: 2, T: 0, S: 1 } },
+      { id: "c", text: "Condemn revenge and demand justice through proper channels.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "d", text: "Write sophisticated justifications for why revenge is 'understandable.'", scores: { K: 4, T: 0, Ac: 0 } },
     ],
   },
   // Q9: Educational standards — reveals merit vs access
@@ -160,8 +160,8 @@ export const QUESTIONS: Question[] = [
     text: "University admission standards are excluding many students from your region. You:",
     options: [
       { id: "a", text: "Advocate for better primary education, not lower standards.", scores: { K: 4, S: 4, Ac: 3 } },
-      { id: "b", text: "Demand quota systems to ensure your region is represented.", scores: { A: 3, T: 1, K: 1 } },
-      { id: "c", text: "Write op-eds about how 'standardized testing is culturally biased.'", scores: { K: 3, T: 1, A: 2 } },
+      { id: "b", text: "Write op-eds about how 'standardized testing is culturally biased.'", scores: { K: 3, T: 1, A: 2 } },
+      { id: "c", text: "Demand quota systems to ensure your region is represented.", scores: { A: 3, T: 1, K: 1 } },
       { id: "d", text: "Accept that your region needs to catch up — standards shouldn't change.", scores: { T: 3, Ac: 3, A: 1 } },
     ],
   },
@@ -170,10 +170,10 @@ export const QUESTIONS: Question[] = [
     id: 10,
     text: "You discover your organization is engaged in harmful practices. Reporting it will hurt your community's reputation. You:",
     options: [
-      { id: "a", text: "Report it — harm is harm, regardless of who commits it.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Try to fix it internally first, without public exposure.", scores: { S: 3, Ac: 3, T: 2 } },
-      { id: "c", text: "Stay quiet — your community has enough problems.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "d", text: "Leak it anonymously but deny involvement if questioned.", scores: { T: 2, Ac: 1, A: 2 } },
+      { id: "a", text: "Stay quiet — your community has enough problems.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Leak it anonymously but deny involvement if questioned.", scores: { T: 2, Ac: 1, A: 2 } },
+      { id: "c", text: "Report it — harm is harm, regardless of who commits it.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "d", text: "Try to fix it internally first, without public exposure.", scores: { S: 3, Ac: 3, T: 2 } },
     ],
   },
   // Q11: Religious extremism — reveals principle vs comfort
@@ -181,10 +181,10 @@ export const QUESTIONS: Question[] = [
     id: 11,
     text: "Your religious community is becoming increasingly intolerant. You:",
     options: [
-      { id: "a", text: "Speak out against the intolerance, even if it makes you unpopular.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "a", text: "Stay but focus on the 'positive aspects' of your faith.", scores: { A: 2, T: 1, S: 2 } },
       { id: "b", text: "Leave and find a more tolerant community.", scores: { S: 2, T: 2, A: 2 } },
-      { id: "c", text: "Stay but focus on the 'positive aspects' of your faith.", scores: { A: 2, T: 1, S: 2 } },
-      { id: "d", text: "Go along with it — you don't want to rock the boat.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Go along with it — you don't want to rock the boat.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Speak out against the intolerance, even if it makes you unpopular.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q12: Political corruption — reveals action vs cynicism
@@ -192,10 +192,10 @@ export const QUESTIONS: Question[] = [
     id: 12,
     text: "Your preferred politician is caught in corruption. You:",
     options: [
-      { id: "a", text: "Condemn them and support accountability, even if it hurts your side.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Defend them — all politicians are corrupt, and your side needs power.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Write nuanced pieces about 'the complexity of governance.'", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Become more cynical — all politicians are the same.", scores: { T: 1, A: 2, S: 1 } },
+      { id: "a", text: "Become more cynical — all politicians are the same.", scores: { T: 1, A: 2, S: 1 } },
+      { id: "b", text: "Write nuanced pieces about 'the complexity of governance.'", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Defend them — all politicians are corrupt, and your side needs power.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Condemn them and support accountability, even if it hurts your side.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q13: Gender discrimination — reveals principle vs culture
@@ -203,10 +203,10 @@ export const QUESTIONS: Question[] = [
     id: 13,
     text: "Your cultural tradition discriminates against women. You:",
     options: [
-      { id: "a", text: "Challenge the tradition publicly and advocate for change.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "a", text: "Follow the tradition personally but don't impose it on others.", scores: { A: 2, T: 1, S: 1 } },
       { id: "b", text: "Work within the tradition to slowly change it.", scores: { S: 3, Ac: 3, T: 2 } },
-      { id: "c", text: "Defend the tradition as 'cultural preservation.'", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
-      { id: "d", text: "Follow the tradition personally but don't impose it on others.", scores: { A: 2, T: 1, S: 1 } },
+      { id: "c", text: "Challenge the tradition publicly and advocate for change.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "d", text: "Defend the tradition as 'cultural preservation.'", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
     ],
   },
   // Q14: Media responsibility — reveals truth vs narrative
@@ -214,10 +214,10 @@ export const QUESTIONS: Question[] = [
     id: 14,
     text: "You're a journalist. A story that would help your community is based on weak evidence. You:",
     options: [
-      { id: "a", text: "Don't publish it — weak evidence is irresponsible.", scores: { T: 4, Ac: 4, K: 3 } },
-      { id: "b", text: "Publish it with caveats about the evidence.", scores: { T: 2, Ac: 2, K: 2 } },
-      { id: "c", text: "Publish it — the narrative is more important than perfect evidence.", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
-      { id: "d", text: "Wait for stronger evidence, even if it means missing the story.", scores: { K: 3, T: 3, Ac: 2 } },
+      { id: "a", text: "Publish it — the narrative is more important than perfect evidence.", scores: { K: 3, T: 0, Ac: 0, A: 2 } },
+      { id: "b", text: "Wait for stronger evidence, even if it means missing the story.", scores: { K: 3, T: 3, Ac: 2 } },
+      { id: "c", text: "Publish it with caveats about the evidence.", scores: { T: 2, Ac: 2, K: 2 } },
+      { id: "d", text: "Don't publish it — weak evidence is irresponsible.", scores: { T: 4, Ac: 4, K: 3 } },
     ],
   },
   // Q15: Youth unemployment — reveals solutions vs complaints
@@ -227,8 +227,8 @@ export const QUESTIONS: Question[] = [
     options: [
       { id: "a", text: "Start a business or training program to create opportunities.", scores: { S: 4, Ac: 4, A: 3 } },
       { id: "b", text: "Advocate for policy changes and systemic reform.", scores: { K: 3, S: 3, Ac: 3 } },
-      { id: "c", text: "Post about the problem and blame the government.", scores: { S: 2, T: 1, Ac: 1 } },
-      { id: "d", text: "Focus on your own career — you can't solve systemic problems.", scores: { A: 3, T: 0, S: 0 } },
+      { id: "c", text: "Focus on your own career — you can't solve systemic problems.", scores: { A: 3, T: 0, S: 0 } },
+      { id: "d", text: "Post about the problem and blame the government.", scores: { S: 2, T: 1, Ac: 1 } },
     ],
   },
   // Q16: Interfaith marriage — reveals principle vs prejudice
@@ -236,10 +236,10 @@ export const QUESTIONS: Question[] = [
     id: 16,
     text: "Your child wants to marry someone from a different religion. Your religious community opposes it. You:",
     options: [
-      { id: "a", text: "Support their choice — love matters more than religion.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Ask them to reconsider — religious compatibility is important.", scores: { A: 3, T: 1, S: 2 } },
+      { id: "a", text: "Oppose it strongly — religious boundaries must be maintained.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Support their choice — love matters more than religion.", scores: { T: 4, Ac: 4, S: 2 } },
       { id: "c", text: "Write sophisticated arguments about 'preserving religious identity.'", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Oppose it strongly — religious boundaries must be maintained.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Ask them to reconsider — religious compatibility is important.", scores: { A: 3, T: 1, S: 2 } },
     ],
   },
   // Q17: Historical revisionism — reveals truth vs narrative
@@ -247,10 +247,10 @@ export const QUESTIONS: Question[] = [
     id: 17,
     text: "Your ethnic group's historical narrative about a conflict is inaccurate. You:",
     options: [
-      { id: "a", text: "Correct the record, even if it undermines your group's position.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Stay quiet — the narrative serves a purpose.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "a", text: "Stay quiet — the narrative serves a purpose.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Privately know the truth but publicly support the narrative.", scores: { T: 1, Ac: 0, A: 2, K: 2 } },
       { id: "c", text: "Write sophisticated histories that 'contextualize' the inaccuracies.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Privately know the truth but publicly support the narrative.", scores: { T: 1, Ac: 0, A: 2, K: 2 } },
+      { id: "d", text: "Correct the record, even if it undermines your group's position.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q18: Resource allocation — reveals merit vs favoritism
@@ -258,10 +258,10 @@ export const QUESTIONS: Question[] = [
     id: 18,
     text: "You control resources for your community. Your family expects preferential treatment. You:",
     options: [
-      { id: "a", text: "Allocate based on need and merit, regardless of family.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Help your family first — that's what family is for.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Create complex criteria that justify helping your family.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Try to balance family expectations with fair allocation.", scores: { T: 2, Ac: 2, A: 2 } },
+      { id: "a", text: "Help your family first — that's what family is for.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "b", text: "Try to balance family expectations with fair allocation.", scores: { T: 2, Ac: 2, A: 2 } },
+      { id: "c", text: "Allocate based on need and merit, regardless of family.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "d", text: "Create complex criteria that justify helping your family.", scores: { K: 4, T: 0, Ac: 0 } },
     ],
   },
   // Q19: Political tribalism — reveals truth vs team loyalty
@@ -269,10 +269,10 @@ export const QUESTIONS: Question[] = [
     id: 19,
     text: "Your political party is clearly wrong about a policy. You:",
     options: [
-      { id: "a", text: "Speak out publicly against the wrong policy.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Support the party — unity matters more than being right.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "c", text: "Write sophisticated defenses of the party's position.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Leave the party and find one that aligns with your views.", scores: { T: 3, S: 2, A: 1 } },
+      { id: "a", text: "Leave the party and find one that aligns with your views.", scores: { T: 3, S: 2, A: 1 } },
+      { id: "b", text: "Write sophisticated defenses of the party's position.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Support the party — unity matters more than being right.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Speak out publicly against the wrong policy.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q20: Educational access — reveals solutions vs excuses
@@ -292,9 +292,9 @@ export const QUESTIONS: Question[] = [
     text: "You discover corruption in your community's leadership. You:",
     options: [
       { id: "a", text: "Expose it publicly and demand accountability.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Try to address it privately to avoid embarrassing the community.", scores: { S: 3, Ac: 3, T: 2 } },
-      { id: "c", text: "Accept it — corruption is everywhere, and your community needs stability.", scores: { A: 3, T: 0, Ac: 0 } },
-      { id: "d", text: "Use the information to gain leverage for your own benefit.", scores: { A: 3, T: 0, Ac: 0, K: 2 } },
+      { id: "b", text: "Accept it — corruption is everywhere, and your community needs stability.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Use the information to gain leverage for your own benefit.", scores: { A: 3, T: 0, Ac: 0, K: 2 } },
+      { id: "d", text: "Try to address it privately to avoid embarrassing the community.", scores: { S: 3, Ac: 3, T: 2 } },
     ],
   },
   // Q22: Intellectual dishonesty — reveals the core Intellectual trait
@@ -303,9 +303,9 @@ export const QUESTIONS: Question[] = [
     text: "You're at a dinner party and someone makes a factually incorrect claim that aligns with your political views. You:",
     options: [
       { id: "a", text: "Correct them — truth matters more than tribal loyalty.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Stay quiet — it's not worth correcting someone on your side.", scores: { T: 0, Ac: 0, A: 2 } },
+      { id: "b", text: "Privately correct them later to maintain the relationship.", scores: { T: 3, S: 3, Ac: 2 } },
       { id: "c", text: "Use sophisticated arguments to defend their position, even though you know it's wrong.", scores: { T: 0, Ac: 0, K: 4 } },
-      { id: "d", text: "Privately correct them later to maintain the relationship.", scores: { T: 3, S: 3, Ac: 2 } },
+      { id: "d", text: "Stay quiet — it's not worth correcting someone on your side.", scores: { T: 0, Ac: 0, A: 2 } },
     ],
   },
   // Q23: Teaching controversial topics — reveals intellectual courage
@@ -313,10 +313,10 @@ export const QUESTIONS: Question[] = [
     id: 23,
     text: "You're asked to teach a course where the evidence clearly supports one conclusion, but your audience believes the opposite. You:",
     options: [
-      { id: "a", text: "Teach the evidence regardless of audience beliefs.", scores: { T: 4, K: 4, Ac: 3 } },
-      { id: "b", text: "Present both sides equally, even though one is clearly wrong.", scores: { T: 1, Ac: 1, K: 2 } },
+      { id: "a", text: "Present both sides equally, even though one is clearly wrong.", scores: { T: 1, Ac: 1, K: 2 } },
+      { id: "b", text: "Avoid the controversial parts and focus on uncontested material.", scores: { T: 2, Ac: 2, A: 1 } },
       { id: "c", text: "Frame the evidence in a way that supports what the audience already believes.", scores: { T: 0, Ac: 0, K: 3 } },
-      { id: "d", text: "Avoid the controversial parts and focus on uncontested material.", scores: { T: 2, Ac: 2, A: 1 } },
+      { id: "d", text: "Teach the evidence regardless of audience beliefs.", scores: { T: 4, K: 4, Ac: 3 } },
     ],
   },
   // Q24: Changing your mind — reveals intellectual honesty
@@ -324,10 +324,10 @@ export const QUESTIONS: Question[] = [
     id: 24,
     text: "You've publicly defended a position for years. New evidence proves you wrong. You:",
     options: [
-      { id: "a", text: "Publicly admit you were wrong and explain what changed your mind.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Quietly shift your position without acknowledging the contradiction.", scores: { T: 1, Ac: 1, K: 2 } },
-      { id: "c", text: "Find sophisticated reasons why the evidence doesn't apply to your case.", scores: { K: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Ignore the evidence — you've invested too much to change now.", scores: { T: 0, Ac: 0, A: 2 } },
+      { id: "a", text: "Find sophisticated reasons why the evidence doesn't apply to your case.", scores: { K: 4, T: 0, Ac: 0 } },
+      { id: "b", text: "Ignore the evidence — you've invested too much to change now.", scores: { T: 0, Ac: 0, A: 2 } },
+      { id: "c", text: "Publicly admit you were wrong and explain what changed your mind.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "d", text: "Quietly shift your position without acknowledging the contradiction.", scores: { T: 1, Ac: 1, K: 2 } },
     ],
   },
   // Q25: Community development — reveals builder vs talker
@@ -335,9 +335,9 @@ export const QUESTIONS: Question[] = [
     id: 25,
     text: "Your community needs a school. The government won't build it. You:",
     options: [
-      { id: "a", text: "Organize the community and start building it yourselves.", scores: { S: 4, Ac: 4, A: 3 } },
-      { id: "b", text: "Write detailed proposals and lobby the government persistently.", scores: { K: 3, S: 3, Ac: 3 } },
-      { id: "c", text: "Post about the problem on social media and tag relevant officials.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "a", text: "Post about the problem on social media and tag relevant officials.", scores: { S: 2, T: 1, Ac: 1 } },
+      { id: "b", text: "Organize the community and start building it yourselves.", scores: { S: 4, Ac: 4, A: 3 } },
+      { id: "c", text: "Write detailed proposals and lobby the government persistently.", scores: { K: 3, S: 3, Ac: 3 } },
       { id: "d", text: "Wait for someone else to solve it — it's not your responsibility.", scores: { A: 2, T: 0, S: 0 } },
     ],
   },
@@ -346,10 +346,10 @@ export const QUESTIONS: Question[] = [
     id: 26,
     text: "You get a job opportunity through a family connection, but there's a more qualified candidate. You:",
     options: [
-      { id: "a", text: "Decline — take the opportunity only if you earn it on merit.", scores: { T: 4, Ac: 4, S: 2 } },
-      { id: "b", text: "Accept — you'll prove yourself once you're in.", scores: { A: 3, T: 1, Ac: 1 } },
-      { id: "c", text: "Accept and use the position to help other family members.", scores: { A: 3, S: 2, T: 0, Ac: 0 } },
-      { id: "d", text: "Accept — the system is corrupt anyway, might as well benefit.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "a", text: "Accept — you'll prove yourself once you're in.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "b", text: "Accept — the system is corrupt anyway, might as well benefit.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "c", text: "Decline — take the opportunity only if you earn it on merit.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "d", text: "Accept and use the position to help other family members.", scores: { A: 3, S: 2, T: 0, Ac: 0 } },
     ],
   },
   // Q27: Information asymmetry — reveals exploitation of knowledge gaps
@@ -357,10 +357,10 @@ export const QUESTIONS: Question[] = [
     id: 27,
     text: "You know something about a product that the seller doesn't realize makes it worth much more. You:",
     options: [
-      { id: "a", text: "Tell them — they deserve to know the real value.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Buy it at the lower price — it's their responsibility to know.", scores: { A: 3, T: 1, Ac: 1 } },
-      { id: "c", text: "Negotiate even harder to get the lowest possible price.", scores: { A: 4, T: 0, Ac: 0 } },
-      { id: "d", text: "Walk away — exploiting their ignorance feels wrong.", scores: { T: 3, S: 2, Ac: 2 } },
+      { id: "a", text: "Walk away — exploiting their ignorance feels wrong.", scores: { T: 3, S: 2, Ac: 2 } },
+      { id: "b", text: "Negotiate even harder to get the lowest possible price.", scores: { A: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Buy it at the lower price — it's their responsibility to know.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "d", text: "Tell them — they deserve to know the real value.", scores: { T: 4, Ac: 4, S: 3 } },
     ],
   },
   // Q28: Collective action problem — reveals free-riding vs. contribution
@@ -368,10 +368,10 @@ export const QUESTIONS: Question[] = [
     id: 28,
     text: "Your community is contributing to a shared project. Most people aren't paying their share. You:",
     options: [
-      { id: "a", text: "Pay your full share and encourage others to do the same.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Pay your share but complain about others not paying.", scores: { T: 3, Ac: 3, S: 2 } },
-      { id: "c", text: "Pay less since others aren't paying — why should you sacrifice?", scores: { A: 2, T: 1, Ac: 0 } },
-      { id: "d", text: "Don't pay at all — let others carry the burden.", scores: { A: 2, T: 0, Ac: 0 } },
+      { id: "a", text: "Pay your share but complain about others not paying.", scores: { T: 3, Ac: 3, S: 2 } },
+      { id: "b", text: "Don't pay at all — let others carry the burden.", scores: { A: 2, T: 0, Ac: 0 } },
+      { id: "c", text: "Pay your full share and encourage others to do the same.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "d", text: "Pay less since others aren't paying — why should you sacrifice?", scores: { A: 2, T: 1, Ac: 0 } },
     ],
   },
   // Q29: Crisis profiteering — reveals extraction under pressure
@@ -379,10 +379,10 @@ export const QUESTIONS: Question[] = [
     id: 29,
     text: "There's a shortage of essential goods. You have access to supply chains. You:",
     options: [
-      { id: "a", text: "Sell at normal prices — people shouldn't suffer during crises.", scores: { T: 4, S: 4, Ac: 3 } },
+      { id: "a", text: "Maximize prices — this is a rare opportunity to profit.", scores: { A: 4, T: 0, Ac: 0 } },
       { id: "b", text: "Sell at slightly higher prices to cover increased costs.", scores: { A: 2, T: 2, Ac: 2 } },
-      { id: "c", text: "Sell at market prices — supply and demand determines value.", scores: { A: 3, T: 1, Ac: 1 } },
-      { id: "d", text: "Maximize prices — this is a rare opportunity to profit.", scores: { A: 4, T: 0, Ac: 0 } },
+      { id: "c", text: "Sell at normal prices — people shouldn't suffer during crises.", scores: { T: 4, S: 4, Ac: 3 } },
+      { id: "d", text: "Sell at market prices — supply and demand determines value.", scores: { A: 3, T: 1, Ac: 1 } },
     ],
   },
   // Q30: Credit claiming — reveals attribution bias
@@ -401,10 +401,10 @@ export const QUESTIONS: Question[] = [
     id: 31,
     text: "You find a loophole that lets you avoid taxes legally. You:",
     options: [
-      { id: "a", text: "Don't use it — pay your fair share.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Use it cautiously — it's legal, so it's acceptable.", scores: { A: 2, T: 2, Ac: 1 } },
-      { id: "c", text: "Use it aggressively — everyone does it.", scores: { A: 3, T: 1, Ac: 0 } },
-      { id: "d", text: "Maximize the benefit — the system is rigged anyway.", scores: { A: 4, T: 0, Ac: 0 } },
+      { id: "a", text: "Use it aggressively — everyone does it.", scores: { A: 3, T: 1, Ac: 0 } },
+      { id: "b", text: "Don't use it — pay your fair share.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "c", text: "Maximize the benefit — the system is rigged anyway.", scores: { A: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Use it cautiously — it's legal, so it's acceptable.", scores: { A: 2, T: 2, Ac: 1 } },
     ],
   },
   // Q32: Zero-sum thinking — reveals competitive vs. collaborative orientation
@@ -413,9 +413,9 @@ export const QUESTIONS: Question[] = [
     text: "A colleague gets promoted over you. You believe you deserved it more. You:",
     options: [
       { id: "a", text: "Congratulate them and focus on your own growth.", scores: { T: 4, Ac: 4, S: 3 } },
-      { id: "b", text: "Ask for feedback on how to improve.", scores: { K: 3, Ac: 3, A: 2 } },
+      { id: "b", text: "Undermine them subtly — they don't deserve it.", scores: { A: 3, T: 0, Ac: 0 } },
       { id: "c", text: "Look for ways to demonstrate your superiority.", scores: { A: 3, T: 1, Ac: 1 } },
-      { id: "d", text: "Undermine them subtly — they don't deserve it.", scores: { A: 3, T: 0, Ac: 0 } },
+      { id: "d", text: "Ask for feedback on how to improve.", scores: { K: 3, Ac: 3, A: 2 } },
     ],
   },
 ];
