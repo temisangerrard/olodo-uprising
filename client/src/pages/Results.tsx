@@ -123,11 +123,11 @@ export default function Results() {
   const archetype = ARCHETYPES[archetypeId];
 
   // Find the most revealing questions for this archetype
-  const answers = JSON.parse(sessionStorage.getItem("olodo_answers") || "[]");
+  const answersObj = JSON.parse(sessionStorage.getItem("olodo_answers") || "{}");
   const revealingQuestions = QUESTIONS.filter(q => {
-    const answer = answers.find((a: any) => a.questionId === q.id);
-    if (!answer) return false;
-    const option = q.options.find(o => o.id === answer.optionId);
+    const optionId = answersObj[q.id];
+    if (!optionId) return false;
+    const option = q.options.find(o => o.id === optionId);
     if (!option) return false;
     
     // For Intellectual: high K, low T, low Ac
@@ -543,8 +543,8 @@ export default function Results() {
                   </div>
                   <div className="flex flex-col gap-4">
                     {revealingQuestions.map((q, idx) => {
-                      const answer = answers.find((a: any) => a.questionId === q.id);
-                      const option = q.options.find(o => o.id === answer.optionId);
+                      const optionId = answersObj[q.id];
+                      const option = q.options.find(o => o.id === optionId);
                       return (
                         <div
                           key={q.id}
@@ -592,8 +592,8 @@ export default function Results() {
                 <ShareCard 
                   archetypeId={archetypeId} 
                   revealingQuestions={revealingQuestions.map(q => {
-                    const answer = answers.find((a: any) => a.questionId === q.id);
-                    const option = q.options.find(o => o.id === answer.optionId);
+                    const optionId = answersObj[q.id];
+                    const option = q.options.find(o => o.id === optionId);
                     return {
                       id: q.id,
                       text: q.text,
