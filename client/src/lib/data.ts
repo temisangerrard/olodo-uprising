@@ -60,7 +60,7 @@ export interface Archetype {
 }
 
 // ============================================================
-// QUESTION BANK (25 questions)
+// QUESTION BANK (32 questions)
 // Nigerian context — forces ownership of real behaviors
 // Reveals archetypes through moral, religious, ethnic, and economic choices
 // ============================================================

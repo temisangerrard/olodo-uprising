@@ -138,7 +138,7 @@ export default function Landing() {
           className="text-lg md:text-xl leading-relaxed mb-4"
           style={{ color: "oklch(0.65 0.01 260)", fontFamily: "'Inter', sans-serif", maxWidth: "540px" }}
         >
-          Answer 20 questions about how you think, decide, and behave. We will classify your cognitive archetype — then simulate what society looks like if 10,000 people exactly like you lived in a radius.
+          Answer 32 questions about how you think, decide, and behave. We will classify your cognitive archetype — then simulate what society looks like if 10,000 people exactly like you lived in a radius.
         </motion.p>
 
         <motion.p
@@ -185,11 +185,11 @@ export default function Landing() {
             className="flex items-center gap-2 text-xs font-mono"
             style={{ color: "oklch(0.40 0.01 260)", fontFamily: "'JetBrains Mono', monospace", paddingTop: "14px" }}
           >
-            <span>~5 minutes</span>
+            <span>~8 minutes</span>
             <span style={{ color: "oklch(0.25 0.01 260)" }}>·</span>
-            <span>20 questions</span>
+            <span>32 questions</span>
             <span style={{ color: "oklch(0.25 0.01 260)" }}>·</span>
-            <span>8 archetypes</span>
+            <span>9 archetypes</span>
           </div>
         </motion.div>
       </main>
