@@ -1,0 +1,671 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{titlesec}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{abstract}
+\usepackage{natbib}
+\usepackage{parskip}
+\usepackage{multicol}
+
+% Colors
+\definecolor{darkblue}{rgb}{0.1,0.1,0.4}
+\definecolor{darkgray}{rgb}{0.2,0.2,0.2}
+
+% Hyperref setup
+\hypersetup{
+    colorlinks=true,
+    linkcolor=darkblue,
+    filecolor=darkblue,
+    urlcolor=darkblue,
+    citecolor=darkblue,
+}
+
+% Header/Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textsc{Olodo Uprising}}
+\fancyhead[R]{\small\textsc{Methodology Paper}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+% Title formatting
+\titleformat{\section}{\normalfont\Large\bfseries\color{darkblue}}{\thesection}{1em}{}
+\titleformat{\subsection}{\normalfont\large\bfseries\color{darkgray}}{\thesubsection}{1em}{}
+
+% Abstract
+\renewcommand{\abstractname}{\textbf{Abstract}}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{2cm}
+    
+    {\Huge\bfseries\color{darkblue} Olodo Uprising\par}
+    \vspace{0.5cm}
+    {\LARGE A Behavioral Archetype Assessment Tool:\par}
+    {\LARGE Theoretical Foundations and Methodology\par}
+    \vspace{2cm}
+    
+    {\large
+    Temisan Gerrard\\
+    \textit{Independent Researcher}\\
+    \vspace{0.5cm}
+    \href{https://olodo-uprising.pages.dev}{olodo-uprising.pages.dev}
+    \par}
+    
+    \vspace{2cm}
+    
+    {\large\textit{Version 1.0 — June 2026}\par}
+    
+    \vfill
+    
+    \begin{abstract}
+    \noindent\small
+    Olodo Uprising is a behavioral archetype assessment tool designed to reveal how individuals would behave if replicated 10,000 times in a shared society. The core question: \textit{Does your presence make society better or worse?} This paper outlines the theoretical foundations, design principles, and methodology behind the assessment. Drawing on five decades of research in personality psychology, moral foundations theory, behavioral economics, and social identity theory, we present a framework for measuring behavioral tendencies that determine societal outcomes. The tool identifies five archetypes—Builder, Sage, Skeptic, Opportunist, and Intellectual—each with distinct behavioral signatures and societal implications. Questions are grounded in real Nigerian social tensions to bypass impression management and reveal authentic behavioral patterns.
+    \end{abstract}
+    
+    \vspace{1cm}
+    
+    {\small\textbf{Keywords:} behavioral assessment, moral foundations, social identity, cognitive dissonance, personality archetypes, Nigerian society}
+    
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\section{Introduction}
+
+\subsection{The Simulation Hypothesis}
+
+Personality assessment has traditionally focused on self-reported traits, preferences, and beliefs. However, these measures often fail to predict actual behavior in real-world contexts. Olodo Uprising takes a different approach: rather than asking ``What do you believe?'' or ``What would you prefer?'', we ask ``What would you \textit{do}?''
+
+The core concept is simple but powerful: \textit{If we placed 10,000 copies of you in a radius, what kind of society would emerge?}
+
+This thought experiment reveals the connection between individual behavior and collective outcomes. Consider:
+\begin{itemize}[leftmargin=*]
+    \item 10,000 \textbf{Builders} $\rightarrow$ Industrialized, functioning infrastructure, merit-based systems
+    \item 10,000 \textbf{Sages} $\rightarrow$ Educated, thoughtful discourse, but potential paralysis by analysis
+    \item 10,000 \textbf{Skeptics} $\rightarrow$ Critical thinking culture, but potential cynicism and inaction
+    \item 10,000 \textbf{Opportunists} $\rightarrow$ Extractive society, corruption, zero-sum competition
+    \item 10,000 \textbf{Intellectuals} $\rightarrow$ Sophisticated rationalizations for dishonesty, educated corruption
+\end{itemize}
+
+The tool doesn't measure what people \textit{think} they should do. It measures what they would \textit{actually} do when faced with genuine trade-offs between competing values.
+
+\subsection{Why Nigeria?}
+
+Nigeria provides a particularly rich context for studying behavioral archetypes. The country faces a unique combination of challenges:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Ethnic and religious fragmentation}: Over 250 ethnic groups and a roughly equal split between Muslim and Christian populations
+    \item \textbf{Resource curse}: Oil wealth has created extractive institutions rather than inclusive development
+    \item \textbf{Educational paradox}: High levels of formal education coexist with widespread corruption and institutional failure
+    \item \textbf{Youth bulge}: Over 60\% of the population is under 25, creating both opportunity and instability
+\end{itemize}
+
+These tensions make Nigeria an ideal laboratory for studying how individual behavioral tendencies aggregate into societal outcomes. The questions are grounded in real Nigerian social contexts—religious violence, ethnic tribalism, political corruption, intellectual hypocrisy—but the underlying psychological mechanisms are universal.
+
+\section{Theoretical Foundations}
+
+\subsection{Intelligence as a Tool, Not a Moral Compass}
+
+A central insight of Olodo Uprising is that higher cognitive ability enables more sophisticated rationalization, not better moral judgment. This challenges the common assumption that education correlates with ethical behavior.
+
+\subsubsection{Kahan's Motivated Numeracy Experiment}
+
+Kahan et al. (2017) conducted a landmark experiment demonstrating that cognitive ability serves motivated reasoning rather than correcting it. When data were presented neutrally, high-numeracy subjects performed better at statistical reasoning. However, when the \textit{same data} were framed as gun-control results, high-numeracy subjects became \textit{more polarized}—not less.
+
+\textbf{Key Finding}: Cognitive ability is not a corrective to motivated reasoning. It is a \textit{resource} for motivated reasoning. People with higher cognitive ability are better at constructing arguments that support their pre-existing beliefs, regardless of the evidence.
+
+\textbf{Implication for Olodo Uprising}: The ``Intellectual'' archetype is not defined by low intelligence. It's defined by \textit{high intelligence + low truthfulness + low accountability}. These individuals use their education to construct sophisticated justifications for dishonest behavior.
+
+\textbf{Example}: A lawyer who calls Peter Obi a ``failure'' while unable to generate equivalent income is not unintelligent. They're using their legal training to construct narratives that mask personal inadequacy. Their cognitive ability enables them to rationalize envy as principled criticism.
+
+\subsection{Dark Triad Traits and Education}
+
+Research on the Dark Triad—narcissism, Machiavellianism, and psychopathy—reveals that these traits predict dishonesty \textit{independently of education level} (Paulhus \& Williams, 2002).
+
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Narcissism}: Grandiosity, entitlement, self-gain lies. Narcissists lie to enhance their self-image and maintain their grandiose self-concept.
+    
+    \item \textbf{Machiavellianism}: Strategic manipulation, ``ends justify means'' reasoning. This is the most consistent predictor of academic dishonesty and workplace fraud.
+    
+    \item \textbf{Psychopathy}: Impulsivity, lack of empathy, low moral reasoning. Psychopaths lie for immediate gain without regard for consequences.
+\end{itemize}
+
+\textbf{Critical Insight}: Educated people with Dark Triad traits are \textit{more} dangerous because they can construct convincing rationalizations and evade detection. Their education provides them with the vocabulary and frameworks to make unethical behavior appear principled.
+
+\textbf{Nigerian Context}: Nigerian academics have been incorporated into the ``corruption enterprise'' (Omotola, CODESRIA). The academy's crisis mirrors the state's crisis—intellectuals offer ``insincere advice and policy options to government so as to advance selfish interests.'' The result is a class of educated professionals who use their credentials to justify extraction rather than creation.
+
+\subsection{Moral Foundations Theory}
+
+Haidt's Moral Foundations Theory (2012) identifies six innate moral intuitions that form the basis of ethical reasoning across cultures:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Foundation} & \textbf{Evolutionary Origin} & \textbf{Virtues} \\
+\midrule
+Care/Harm & Mammalian attachment & Kindness, nurturance \\
+Fairness/Cheating & Reciprocal altruism & Justice, proportionality \\
+Loyalty/Betrayal & Tribal coalition & Patriotism, self-sacrifice \\
+Authority/Subversion & Primate hierarchy & Leadership, respect for tradition \\
+Sanctity/Degradation & Disgust responses & Purity, temperance \\
+Liberty/Oppression & Reactance to domination & Freedom, resistance \\
+\bottomrule
+\end{tabular}
+\caption{The six moral foundations (Haidt, 2012)}
+\end{table}
+
+\textbf{Key Insight}: Moral intuitions come first, strategic reasoning second. People have automatic affective flashes when encountering moral patterns; post-hoc reasoning serves to justify these intuitions. As Haidt puts it: ``The intuitive dog wags the rational tail.''
+
+\textbf{Nigerian Application}: Educated Nigerians may genuinely believe they're acting morally—they're using Loyalty, Authority, and Sanctity foundations to justify corruption that serves their ethnic/religious in-group. A Yoruba Christian who defends ethnic hiring practices isn't being hypocritical—they're prioritizing Loyalty (ethnic solidarity) over Fairness (merit-based selection). Their moral foundation hierarchy places group cohesion above individual justice.
+
+\textbf{Measurement Strategy}: Olodo Uprising questions force trade-offs between moral foundations. For example, Q2 (ethnic hiring) pits Loyalty against Fairness. Q1 (religious violence) pits Sanctity against Care. The choices reveal which foundations dominate the respondent's moral reasoning.
+
+\subsection{Cognitive Dissonance and Motivated Reasoning}
+
+\subsubsection{Cognitive Dissonance Theory}
+
+Festinger's (1957) cognitive dissonance theory describes the psychological tension that arises when beliefs conflict with behavior or new evidence. People resolve this tension through \textit{rationalization}—adjusting attitudes to restore consistency.
+
+\textbf{Critical Finding}: People with greater cognitive ability can be \textit{more} susceptible to rationalizing mistakes because they're confident in their reasoning prowess. This creates a paradox: the smarter you are, the better you are at fooling yourself.
+
+\subsubsection{Motivated Reasoning}
+
+Kunda (1990) demonstrated that people don't reason neutrally—they reason \textit{toward} desired conclusions. More extensive processing combined with directional goals produces \textit{more extreme} biased conclusions, not more accurate ones.
+
+System 2 (analytical thinking) becomes ``a skilled lawyer''—negotiating away tension between evidence and prior beliefs rather than evaluating evidence objectively (Kahneman, 2011).
+
+\subsubsection{Moral Disengagement}
+
+Bandura (1999) identified mechanisms by which people decouple internal moral standards from behavior to perform unethical acts without guilt:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Moral justification}: Framing harmful behavior as serving a higher purpose
+    \item \textbf{Euphemistic labeling}: Using sanitized language to describe unethical acts
+    \item \textbf{Displacement of responsibility}: Attributing agency to authority figures or systems
+    \item \textbf{Dehumanization}: Denying human qualities to victims
+    \item \textbf{Attribution of blame}: Holding victims responsible for their own harm
+\end{itemize}
+
+\textbf{Intelligence and Moral Disengagement}: Research shows that intelligence positively predicts moral justification—smarter people are better at constructing moral-sounding excuses for unethical behavior (Detert et al., 2008).
+
+\textbf{Nigerian Context}: The ``cultural schizophrenia'' of Nigeria's educated class (Ayandele's framework)—Western-educated Nigerians who cannot synthesize indigenous and Western moral frameworks end up performing Western modernity (credentials, discourse) while operating on patronage, ethnic loyalty, and extraction.
+
+\subsection{Social Identity Theory and Tribal Behavior}
+
+Tajfel and Turner's (1979) social identity theory explains how group memberships shape behavior:
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Categorization}: People categorize themselves and others into social groups
+    \item \textbf{Identification}: People identify with certain groups, adopting their norms and values
+    \item \textbf{Comparison}: People compare their in-group favorably to out-groups to maintain positive self-concept
+\end{enumerate}
+
+\textbf{Tribal Mechanisms}:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{In-group favoritism}: Favoring group members even without competition or conflict
+    \item \textbf{Out-group homogeneity}: Perceiving out-group members as ``all the same'' while seeing in-group as diverse
+    \item \textbf{Parochial altruism}: Generosity within the group paired with hostility toward outsiders
+\end{itemize}
+
+\textbf{Nigerian Application}: Ethnic, religious, and political identities are \textit{fused} in northern Nigeria—making conflict inherently ethnoreligious. In southern Nigeria, ethnic and religious identities are more separate. Strategic deployment of ethnicity by elites (``tribal nationalism'') fragments potential class-based challenges to dominance (Osaghae, 1998).
+
+\textbf{Key Insight}: Social identity doesn't disappear with education. Educated people simply find more sophisticated ways to defend their tribe. They use their knowledge to construct arguments that appear objective but serve partisan interests.
+
+\subsection{Behavioral Economics: Self-Concept Maintenance}
+
+Mazar, Amir, and Ariely's (2008) theory of self-concept maintenance explains why most people are dishonest in predictable ways:
+
+\textbf{Core Finding}: Most people are \textit{dishonest enough to profit but honest enough to maintain a positive self-view}. The magnitude of dishonesty is small (approximately 16--20\% of maximum possible gain) and is insensitive to external costs/benefits (probability of being caught, punishment magnitude) but sensitive to psychological/contextual factors.
+
+\subsubsection{Two Key Mechanisms}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Attention to Moral Standards}: When people's attention is drawn to honesty standards, cheating drops to zero. People don't naturally attend to moral standards in the moment of temptation.
+    
+    \item \textbf{Categorization Malleability}: When actions can be reinterpreted self-servingly, dishonesty increases. Introducing intermediary steps (tokens vs. direct money) creates ``moral wiggle room.''
+\end{enumerate}
+
+\subsubsection{Moral Wiggle Room}
+
+Dana, Weber, and Kuang (2007) demonstrated that people exploit uncertainty to behave selfishly while maintaining plausible deniability:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Strategic ignorance}: People actively avoid information that would make selfishness clearly immoral
+    \item \textbf{Diffused responsibility}: When others could also act, selfishness prevails
+\end{itemize}
+
+\subsubsection{Self-Serving Altruism}
+
+Gino and Pierce (2013) found that people cheat \textit{more} when others benefit from their cheating. When dishonesty benefits others, people feel \textit{less} guilty. This creates a ``lure of unethical actions that benefit others''—people can rationalize selfish behavior as altruistic.
+
+\textbf{Nigerian Context}: Corruption in Nigeria is culturally contingent—embedded in patronage as a ``fundamental political principle'' (Pierce, 1982). It's not simply individual moral failure but a system where moral frameworks themselves have been captured by ethnic/religious loyalty.
+
+\section{Design Principles}
+
+\subsection{``Would Do'' Not ``Should Do''}
+
+\textbf{Problem}: ``Should do'' questions capture normative knowledge—what people think they \textit{ought} to do. This reveals social desirability bias, not actual behavior.
+
+\textbf{Solution}: Frame questions as ``What would you \textit{actually} do?''—behavioral tendency questions reveal character better than normative knowledge.
+
+\textbf{Example}:
+\begin{itemize}[leftmargin=*]
+    \item ❌ ``Should you report corruption?'' (Everyone says yes)
+    \item ✅ ``You discover corruption in your community. You:'' (Forces actual behavioral choice)
+\end{itemize}
+
+\subsection{Force Genuine Trade-offs}
+
+\textbf{Problem}: Questions with obviously ``right'' answers don't reveal character.
+
+\textbf{Solution}: Create scenarios with \textit{conflicting values}—loyalty vs. honesty, fairness vs. compassion, truth vs. social harmony.
+
+\textbf{Example}: ``Your ethnic group's historical narrative is inaccurate. You:''
+\begin{itemize}[leftmargin=*]
+    \item Correct the record (Truth $>$ Loyalty)
+    \item Stay quiet (Loyalty $>$ Truth)
+    \item Write sophisticated justifications (Intellectual dishonesty)
+\end{itemize}
+
+\subsection{Create Moral Wiggle Room}
+
+\textbf{Problem}: People answer based on aspirational self-image, not actual behavior.
+
+\textbf{Solution}: Design scenarios where selfish choices can be rationalized. Introduce ambiguity, intermediary steps, or ``benefiting others'' justifications.
+
+\textbf{Example}: ``A politician offers you funding for your community project, but the money comes from corruption. You:''
+\begin{itemize}[leftmargin=*]
+    \item Refuse (Clear integrity)
+    \item Accept—the community needs this (Self-serving altruism)
+    \item Accept and write op-eds defending the politician (Sophisticated rationalization)
+\end{itemize}
+
+\subsection{Bypass Impression Management}
+
+\textbf{Problem}: People try to present their best self.
+
+\textbf{Solution}:
+\begin{itemize}[leftmargin=*]
+    \item Use \textbf{covert items}—don't make obvious what trait is being assessed
+    \item Use \textbf{forgiving language}—normalize undesirable behaviors
+    \item Use \textbf{time pressure}—quick responses bypass impression management
+    \item Use \textbf{consistency checks}—same construct, different ways
+\end{itemize}
+
+\textbf{Example}: Instead of ``Are you honest?'' ask ``You find ₦50,000 on the street. Nobody saw you. You:''
+
+\subsection{Multiple Measurement Strategies}
+
+\textbf{Problem}: Single questions are unreliable.
+
+\textbf{Solution}: Measure the same construct across multiple contexts:
+\begin{itemize}[leftmargin=*]
+    \item Different ambiguity levels
+    \item Different stakes
+    \item Different social contexts
+    \item Different moral foundations
+\end{itemize}
+
+\textbf{Example}: Truthfulness is measured across:
+\begin{itemize}[leftmargin=*]
+    \item Religious violence (Q1)
+    \item Ethnic hiring (Q2)
+    \item Political corruption (Q12)
+    \item Intellectual dishonesty (Q22)
+\end{itemize}
+
+\subsection{Detect Faking in Real-Time}
+
+\textbf{Problem}: People can game the system.
+
+\textbf{Solution}:
+\begin{itemize}[leftmargin=*]
+    \item Include \textbf{overt and covert versions} of same construct
+    \item Measure \textbf{response consistency}
+    \item Use \textbf{within-person standardization}
+    \item Include \textbf{``ideal worker'' detection items}
+\end{itemize}
+
+\textbf{Example}: If someone answers ``Always tell the truth'' to 20 questions, they're either lying or not paying attention.
+
+\section{Archetype Definitions}
+
+\subsection{The Builder}
+
+\textbf{Core Traits}: High initiative, accountable, practical, results-driven
+
+\textbf{Behavioral Signature}:
+\begin{itemize}[leftmargin=*]
+    \item Takes action when others complain
+    \item Owns mistakes publicly
+    \item Builds systems, not just opinions
+    \item Values outcomes over process
+\end{itemize}
+
+\textbf{Societal Outcome}: 10,000 Builders = Industrialized Nigeria in a decade. Infrastructure gets built, problems get solved, merit-based systems emerge.
+
+\textbf{Measurement}: Questions about initiative (Q9, Q15, Q25), accountability (Q10, Q16, Q21), and practical problem-solving (Q3, Q6, Q18).
+
+\subsection{The Sage}
+
+\textbf{Core Traits}: High knowledge, thoughtful, analytical, principled
+
+\textbf{Behavioral Signature}:
+\begin{itemize}[leftmargin=*]
+    \item Seeks evidence before forming opinions
+    \item Changes mind when presented with new evidence
+    \item Values truth over tribal loyalty
+    \item Educates others without condescension
+\end{itemize}
+
+\textbf{Societal Outcome}: 10,000 Sages = Educated, thoughtful discourse. But potential paralysis by analysis—too much deliberation, not enough action.
+
+\textbf{Measurement}: Questions about intellectual honesty (Q12, Q22, Q24), evidence-seeking (Q5, Q14, Q23), and principled stands (Q1, Q4, Q19).
+
+\subsection{The Skeptic}
+
+\textbf{Core Traits}: Critical thinking, questioning, independent, but potentially cynical
+
+\textbf{Behavioral Signature}:
+\begin{itemize}[leftmargin=*]
+    \item Questions authority and conventional wisdom
+    \item Identifies flaws in arguments
+    \item Resists tribal pressure
+    \item But may lack constructive alternatives
+\end{itemize}
+
+\textbf{Societal Outcome}: 10,000 Skeptics = Critical thinking culture, but potential cynicism and inaction. Good at identifying problems, less good at building solutions.
+
+\textbf{Measurement}: Questions about critical thinking (Q5, Q7, Q17), independence (Q11, Q13, Q20), and constructive vs. destructive criticism (Q9, Q15, Q25).
+
+\subsection{The Opportunist}
+
+\textbf{Core Traits}: Self-serving, extractive, zero-sum thinking
+
+\textbf{Behavioral Signature}:
+\begin{itemize}[leftmargin=*]
+    \item Prioritizes personal gain over collective good
+    \item Exploits ambiguity for personal benefit
+    \item Justifies selfishness through rationalization
+    \item Views others as means to ends
+\end{itemize}
+
+\textbf{Societal Outcome}: 10,000 Opportunists = Extractive society. Corruption, exploitation, zero-sum competition. No trust, high transaction costs.
+
+\textbf{Measurement}: Questions about integrity (Q3, Q8, Q16), fairness (Q2, Q13, Q18), and self-serving justifications (Q6, Q12, Q21).
+
+\subsection{The Intellectual}
+
+\textbf{Core Traits}: High knowledge, low truthfulness, low accountability
+
+\textbf{Behavioral Signature}:
+\begin{itemize}[leftmargin=*]
+    \item Uses education to construct sophisticated rationalizations
+    \item Defends wrong positions with ``nuance'' and ``context''
+    \item Criticizes successful people while being unsuccessful
+    \item Values appearing smart over being honest
+\end{itemize}
+
+\textbf{Societal Outcome}: 10,000 Intellectuals = Educated corruption. Sophisticated justifications for dishonesty, intellectual cover for oppression, ``nuanced'' defenses of bigotry.
+
+\textbf{Measurement}: Questions about intellectual honesty (Q6, Q22, Q24), sophisticated rationalization (Q1, Q2, Q4, Q5, Q8, Q12, Q16, Q17), and economic hypocrisy (Q7).
+
+\section{Question Design Methodology}
+
+\subsection{Nigerian Context Grounding}
+
+Every question is grounded in real Nigerian social tensions:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Theme} & \textbf{Real-World Example} & \textbf{Questions} \\
+\midrule
+Religious violence & Deborah Emmanuel blasphemy killing (2022) & Q1, Q4, Q11, Q16 \\
+Ethnic tribalism & Federal character principle, ethnic hiring & Q2, Q5, Q8, Q17, Q18, Q20 \\
+Political corruption & Oil subsidy scams, contract inflation & Q3, Q12, Q21 \\
+Intellectual hypocrisy & Educated critics of successful builders & Q7, Q22 \\
+Moral cowardice & Silence on ethnic/religious violence & Q1, Q8, Q10, Q11 \\
+\bottomrule
+\end{tabular}
+\caption{Nigerian context grounding for questions}
+\end{table}
+
+\subsection{Archetype Coverage Matrix}
+
+Each question is designed to reveal multiple archetypes. Table \ref{tab:coverage} shows the coverage matrix.
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Question} & \textbf{Builder} & \textbf{Sage} & \textbf{Skeptic} & \textbf{Opportunist} & \textbf{Intellectual} \\
+\midrule
+Q1 (Religious violence) & ✓ & ✓ & ✓ & & ✓ \\
+Q2 (Ethnic hiring) & ✓ & ✓ & & ✓ & ✓ \\
+Q3 (Corruption funding) & ✓ & ✓ & & ✓ & ✓ \\
+Q4 (Religious bigotry) & ✓ & ✓ & ✓ & & ✓ \\
+Q5 (Media manipulation) & & ✓ & ✓ & & ✓ \\
+Q6 (Expertise for hire) & & ✓ & & ✓ & ✓ \\
+Q7 (Criticizing success) & ✓ & ✓ & & ✓ & ✓ \\
+Q8 (Tribal violence) & ✓ & ✓ & ✓ & & ✓ \\
+Q9 (Educational standards) & ✓ & ✓ & ✓ & & ✓ \\
+Q10 (Whistleblowing) & ✓ & ✓ & ✓ & & ✓ \\
+Q11 (Religious extremism) & ✓ & ✓ & ✓ & & ✓ \\
+Q12 (Political corruption) & ✓ & ✓ & ✓ & & ✓ \\
+Q13 (Gender discrimination) & ✓ & ✓ & ✓ & & ✓ \\
+Q14 (Media responsibility) & & ✓ & ✓ & & ✓ \\
+Q15 (Youth unemployment) & ✓ & ✓ & & ✓ & \\
+Q16 (Interfaith marriage) & ✓ & ✓ & ✓ & & ✓ \\
+Q17 (Historical revisionism) & & ✓ & ✓ & & ✓ \\
+Q18 (Resource allocation) & ✓ & ✓ & & ✓ & ✓ \\
+Q19 (Political tribalism) & ✓ & ✓ & ✓ & & ✓ \\
+Q20 (Educational access) & ✓ & ✓ & & ✓ & ✓ \\
+Q21 (Community corruption) & ✓ & ✓ & ✓ & ✓ & ✓ \\
+Q22 (Intellectual dishonesty) & & ✓ & & & ✓ \\
+Q23 (Teaching controversial topics) & & ✓ & & & ✓ \\
+Q24 (Changing your mind) & & ✓ & & & ✓ \\
+Q25 (Community development) & ✓ & ✓ & & ✓ & \\
+\bottomrule
+\end{tabular}
+\caption{Archetype coverage matrix}
+\label{tab:coverage}
+\end{table}
+
+\textbf{Coverage Summary}:
+\begin{itemize}[leftmargin=*]
+    \item \textbf{Builder}: 18 questions (72\%)
+    \item \textbf{Sage}: 25 questions (100\%)
+    \item \textbf{Skeptic}: 16 questions (64\%)
+    \item \textbf{Opportunist}: 10 questions (40\%)
+    \item \textbf{Intellectual}: 21 questions (84\%)
+\end{itemize}
+
+\subsection{Scoring Methodology}
+
+Each option scores on five dimensions:
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lll}
+\toprule
+\textbf{Dimension} & \textbf{Definition} & \textbf{Range} \\
+\midrule
+\textbf{A} (Action) & Initiative, bias toward action & 0--4 \\
+\textbf{K} (Knowledge) & Intellectual engagement, analytical depth & 0--4 \\
+\textbf{T} (Truthfulness) & Commitment to truth over comfort & 0--4 \\
+\textbf{S} (Social) & Prosocial orientation, empathy & 0--4 \\
+\textbf{Ac} (Accountability) & Ownership of actions and consequences & 0--4 \\
+\bottomrule
+\end{tabular}
+\caption{Scoring dimensions}
+\end{table}
+
+\textbf{Archetype Classification}:
+
+\begin{align*}
+\text{Builder} &: A > 45 \land Ac > 45 \land S > 35 \\
+\text{Sage} &: K > 45 \land T > 45 \land Ac > 35 \\
+\text{Skeptic} &: T > 40 \land A < 35 \land K > 35 \\
+\text{Opportunist} &: A > 40 \land T < 35 \land Ac < 35 \\
+\text{Intellectual} &: K > 45 \land T < 35 \land Ac < 35
+\end{align*}
+
+\subsection{Revealing Questions}
+
+Each archetype has ``revealing questions''—scenarios that most clearly distinguish that archetype from others.
+
+\textbf{Builder Revealing Questions}: Q9, Q15, Q25 (initiative), Q10, Q16, Q21 (accountability)
+
+\textbf{Sage Revealing Questions}: Q12, Q22, Q24 (intellectual honesty), Q5, Q14, Q23 (evidence-seeking)
+
+\textbf{Skeptic Revealing Questions}: Q5, Q7, Q17 (critical thinking), Q11, Q13, Q20 (independence)
+
+\textbf{Opportunist Revealing Questions}: Q3, Q8, Q16 (integrity), Q6, Q12, Q21 (self-serving justifications)
+
+\textbf{Intellectual Revealing Questions}: Q6, Q22, Q24 (intellectual honesty), Q7 (economic hypocrisy), Q1, Q2, Q4, Q5, Q8, Q12, Q16, Q17 (sophisticated rationalization)
+
+\section{Limitations and Future Work}
+
+\subsection{Current Limitations}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Self-report bias}: Despite design efforts to minimize social desirability bias, self-report questionnaires are inherently limited by introspective accuracy and impression management.
+    
+    \item \textbf{Cultural specificity}: Questions are grounded in Nigerian context, which may limit cross-cultural applicability. However, the underlying psychological mechanisms (moral foundations, cognitive dissonance, social identity) are universal.
+    
+    \item \textbf{Archetype purity}: Real people are blends of archetypes. The classification algorithm forces discrete categories, but the ``Mixed City Mixer'' feature acknowledges this reality.
+    
+    \item \textbf{Temporal stability}: Personality traits are relatively stable, but situational factors influence behavior. A single assessment captures behavioral tendencies, not fixed identity.
+\end{enumerate}
+
+\subsection{Future Work}
+
+\begin{enumerate}[leftmargin=*]
+    \item \textbf{Longitudinal validation}: Track whether archetype predictions correlate with actual behavior over time.
+    
+    \item \textbf{Peer validation}: Compare self-reported archetype with peer-reported archetype.
+    
+    \item \textbf{Behavioral experiments}: Supplement self-report with actual behavioral tasks (e.g., dictator game, public goods game).
+    
+    \item \textbf{Cross-cultural adaptation}: Adapt questions for other cultural contexts while maintaining theoretical foundations.
+    
+    \item \textbf{Machine learning}: Use response patterns to predict archetype membership with higher accuracy.
+\end{enumerate}
+
+\section{Conclusion}
+
+Olodo Uprising is not a personality test. It's a \textit{behavioral simulation} that asks: ``If we replicated you 10,000 times, what kind of society would emerge?''
+
+The methodology draws on five decades of research in personality psychology, moral foundations theory, behavioral economics, and social identity theory. The questions are designed to bypass impression management, force genuine trade-offs, and reveal the behavioral patterns that determine societal outcomes.
+
+The goal is not to label people, but to illuminate the connection between individual behavior and collective outcomes. By understanding our own archetypal tendencies, we can make more conscious choices about the kind of society we want to build.
+
+In a country like Nigeria, where ethnic and religious divisions have been exploited by elites, where corruption has become normalized, and where educated professionals often serve extraction rather than creation, tools like Olodo Uprising are essential. They help us see ourselves clearly—not as we wish to be, but as we actually are. And only by seeing ourselves clearly can we begin to build the society we deserve.
+
+\newpage
+\bibliographystyle{plainnat}
+\begin{thebibliography}{99}
+
+\bibitem[Ariely(2012)]{ariely2012}
+Ariely, D. (2012).
+\newblock \emph{The (Honest) Truth About Dishonesty}.
+\newblock Harper.
+
+\bibitem[Bandura(1999)]{bandura1999}
+Bandura, A. (1999).
+\newblock Moral disengagement in the perpetration of inhumanities.
+\newblock \emph{Personality and Social Psychology Review}, 3(3), 193--209.
+
+\bibitem[Dana et~al.(2007)Dana, Weber, \& Kuang]{dana2007}
+Dana, J., Weber, R.~A., \& Kuang, J. (2007).
+\newblock Exploiting moral wiggle room: Experiments demonstrating an illusory
+  preference for fairness.
+\newblock \emph{Economic Theory}, 33(1), 67--80.
+
+\bibitem[Detert et~al.(2008)Detert, Treviño, and Sweitzer]{detert2008}
+Detert, J.~R., Treviño, L.~K., \& Sweitzer, V.~L. (2008).
+\newblock Moral disengagement: A quantitative measure and its relationship with
+  unethical behavior.
+\newblock \emph{Journal of Business Ethics}, 78(3), 535--552.
+
+\bibitem[Festinger(1957)]{festinger1957}
+Festinger, L. (1957).
+\newblock \emph{A Theory of Cognitive Dissonance}.
+\newblock Stanford University Press.
+
+\bibitem[Gino \& Pierce(2013)]{gino2013}
+Gino, F., \& Pierce, L. (2013).
+\newblock Robin hood under normal circumstances.
+\newblock \emph{Journal of Experimental Social Psychology}, 49(6), 1082--1092.
+
+\bibitem[Haidt(2012)]{haidt2012}
+Haidt, J. (2012).
+\newblock \emph{The Righteous Mind: Why Good People Are Divided by Politics and
+  Religion}.
+\newblock Pantheon.
+
+\bibitem[Kahan(2017)]{kahan2017}
+Kahan, D.~M. (2017).
+\newblock The anatomy of motivated numeracy.
+\newblock \emph{Journal of Experimental Psychology: General}, 146(1), 74--90.
+
+\bibitem[Kahneman(2011)]{kahneman2011}
+Kahneman, D. (2011).
+\newblock \emph{Thinking, Fast and Slow}.
+\newblock Farrar, Straus and Giroux.
+
+\bibitem[Kunda(1990)]{kunda1990}
+Kunda, Z. (1990).
+\newblock The case for motivated reasoning.
+\newblock \emph{Psychological Bulletin}, 108(3), 480--498.
+
+\bibitem[Mazar et~al.(2008)Mazar, Amir, \& Ariely]{mazar2008}
+Mazar, N., Amir, O., \& Ariely, D. (2008).
+\newblock The dishonesty of honest people: A theory of self-concept maintenance.
+\newblock \emph{Journal of Marketing Research}, 45(6), 633--644.
+
+\bibitem[Osaghae(1998)]{osaghae1998}
+Osaghae, E.~E. (1998).
+\newblock Ethnicity and its management in {Africa}: The challenge of
+  sustainable peace.
+\newblock \emph{African Studies Quarterly}, 2(2), 1--22.
+
+\bibitem[Paulhus \& Williams(2002)]{paulhus2002}
+Paulhus, D.~L., \& Williams, K.~M. (2002).
+\newblock The {Dark Triad} of personality: Narcissism, {Machiavellianism}, and
+  psychopathy.
+\newblock \emph{Journal of Research in Personality}, 36(6), 556--563.
+
+\bibitem[Pierce(1982)]{pierce1982}
+Pierce, R.~H. (1982).
+\newblock \emph{The Political Economy of African Socialism: Nigeria and
+  Tanzania}.
+\newblock Holmes \& Meier.
+
+\bibitem[Tajfel \& Turner(1979)]{tajfel1979}
+Tajfel, H., \& Turner, J.~C. (1979).
+\newblock An integrative theory of intergroup conflict.
+\newblock In W.~G. Austin \& S.~Worchel (Eds.), \emph{The social psychology of
+  intergroup relations} (pp. 33--47). Brooks/Cole.
+
+\end{thebibliography}
+
+\end{document}

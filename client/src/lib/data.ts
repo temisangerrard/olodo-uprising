@@ -341,6 +341,83 @@ export const QUESTIONS: Question[] = [
       { id: "d", text: "Wait for someone else to solve it — it's not your responsibility.", scores: { A: 2, T: 0, S: 0 } },
     ],
   },
+  // Q26: Exploiting connections — reveals opportunistic networking
+  {
+    id: 26,
+    text: "You get a job opportunity through a family connection, but there's a more qualified candidate. You:",
+    options: [
+      { id: "a", text: "Decline — take the opportunity only if you earn it on merit.", scores: { T: 4, Ac: 4, S: 2 } },
+      { id: "b", text: "Accept — you'll prove yourself once you're in.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "c", text: "Accept and use the position to help other family members.", scores: { A: 3, S: 2, T: 0, Ac: 0 } },
+      { id: "d", text: "Accept — the system is corrupt anyway, might as well benefit.", scores: { A: 3, T: 0, Ac: 0 } },
+    ],
+  },
+  // Q27: Information asymmetry — reveals exploitation of knowledge gaps
+  {
+    id: 27,
+    text: "You know something about a product that the seller doesn't realize makes it worth much more. You:",
+    options: [
+      { id: "a", text: "Tell them — they deserve to know the real value.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Buy it at the lower price — it's their responsibility to know.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "c", text: "Negotiate even harder to get the lowest possible price.", scores: { A: 4, T: 0, Ac: 0 } },
+      { id: "d", text: "Walk away — exploiting their ignorance feels wrong.", scores: { T: 3, S: 2, Ac: 2 } },
+    ],
+  },
+  // Q28: Collective action problem — reveals free-riding vs. contribution
+  {
+    id: 28,
+    text: "Your community is contributing to a shared project. Most people aren't paying their share. You:",
+    options: [
+      { id: "a", text: "Pay your full share and encourage others to do the same.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Pay your share but complain about others not paying.", scores: { T: 3, Ac: 3, S: 2 } },
+      { id: "c", text: "Pay less since others aren't paying — why should you sacrifice?", scores: { A: 2, T: 1, Ac: 0 } },
+      { id: "d", text: "Don't pay at all — let others carry the burden.", scores: { A: 2, T: 0, Ac: 0 } },
+    ],
+  },
+  // Q29: Crisis profiteering — reveals extraction under pressure
+  {
+    id: 29,
+    text: "There's a shortage of essential goods. You have access to supply chains. You:",
+    options: [
+      { id: "a", text: "Sell at normal prices — people shouldn't suffer during crises.", scores: { T: 4, S: 4, Ac: 3 } },
+      { id: "b", text: "Sell at slightly higher prices to cover increased costs.", scores: { A: 2, T: 2, Ac: 2 } },
+      { id: "c", text: "Sell at market prices — supply and demand determines value.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "d", text: "Maximize prices — this is a rare opportunity to profit.", scores: { A: 4, T: 0, Ac: 0 } },
+    ],
+  },
+  // Q30: Credit claiming — reveals attribution bias
+  {
+    id: 30,
+    text: "A project succeeds due to team effort, but you could position yourself as the key contributor. You:",
+    options: [
+      { id: "a", text: "Give credit to the whole team publicly.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Acknowledge the team but highlight your specific contributions.", scores: { A: 3, T: 2, Ac: 2 } },
+      { id: "c", text: "Emphasize your role — you did the most important work.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "d", text: "Position yourself as the driving force — others will believe it.", scores: { A: 4, T: 0, Ac: 0 } },
+    ],
+  },
+  // Q31: Rule exploitation — reveals gaming the system
+  {
+    id: 31,
+    text: "You find a loophole that lets you avoid taxes legally. You:",
+    options: [
+      { id: "a", text: "Don't use it — pay your fair share.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Use it cautiously — it's legal, so it's acceptable.", scores: { A: 2, T: 2, Ac: 1 } },
+      { id: "c", text: "Use it aggressively — everyone does it.", scores: { A: 3, T: 1, Ac: 0 } },
+      { id: "d", text: "Maximize the benefit — the system is rigged anyway.", scores: { A: 4, T: 0, Ac: 0 } },
+    ],
+  },
+  // Q32: Zero-sum thinking — reveals competitive vs. collaborative orientation
+  {
+    id: 32,
+    text: "A colleague gets promoted over you. You believe you deserved it more. You:",
+    options: [
+      { id: "a", text: "Congratulate them and focus on your own growth.", scores: { T: 4, Ac: 4, S: 3 } },
+      { id: "b", text: "Ask for feedback on how to improve.", scores: { K: 3, Ac: 3, A: 2 } },
+      { id: "c", text: "Look for ways to demonstrate your superiority.", scores: { A: 3, T: 1, Ac: 1 } },
+      { id: "d", text: "Undermine them subtly — they don't deserve it.", scores: { A: 3, T: 0, Ac: 0 } },
+    ],
+  },
 ];
 
 // ============================================================

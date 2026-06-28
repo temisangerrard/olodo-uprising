@@ -52,27 +52,48 @@ export default function Landing() {
             Olodo Uprising
           </span>
         </div>
-        <a
-          href="https://github.com/temisangerrard/olodo-uprising"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-xs font-mono tracking-wider px-3 py-1.5 border transition-colors duration-150"
-          style={{
-            fontFamily: "'JetBrains Mono', monospace",
-            borderColor: "oklch(1 0 0 / 0.15)",
-            color: "oklch(0.55 0.01 260)",
-          }}
-          onMouseEnter={e => {
-            (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.78 0.16 75 / 0.5)";
-            (e.currentTarget as HTMLElement).style.color = "oklch(0.78 0.16 75)";
-          }}
-          onMouseLeave={e => {
-            (e.currentTarget as HTMLElement).style.borderColor = "oklch(1 0 0 / 0.15)";
-            (e.currentTarget as HTMLElement).style.color = "oklch(0.55 0.01 260)";
-          }}
-        >
-          Open Source ↗
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="/methodology"
+            className="text-xs font-mono tracking-wider px-3 py-1.5 border transition-colors duration-150"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              borderColor: "oklch(1 0 0 / 0.15)",
+              color: "oklch(0.55 0.01 260)",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.78 0.16 75 / 0.5)";
+              (e.currentTarget as HTMLElement).style.color = "oklch(0.78 0.16 75)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.borderColor = "oklch(1 0 0 / 0.15)";
+              (e.currentTarget as HTMLElement).style.color = "oklch(0.55 0.01 260)";
+            }}
+          >
+            Methodology
+          </a>
+          <a
+            href="https://github.com/temisangerrard/olodo-uprising"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-mono tracking-wider px-3 py-1.5 border transition-colors duration-150"
+            style={{
+              fontFamily: "'JetBrains Mono', monospace",
+              borderColor: "oklch(1 0 0 / 0.15)",
+              color: "oklch(0.55 0.01 260)",
+            }}
+            onMouseEnter={e => {
+              (e.currentTarget as HTMLElement).style.borderColor = "oklch(0.78 0.16 75 / 0.5)";
+              (e.currentTarget as HTMLElement).style.color = "oklch(0.78 0.16 75)";
+            }}
+            onMouseLeave={e => {
+              (e.currentTarget as HTMLElement).style.borderColor = "oklch(1 0 0 / 0.15)";
+              (e.currentTarget as HTMLElement).style.color = "oklch(0.55 0.01 260)";
+            }}
+          >
+            Open Source ↗
+          </a>
+        </div>
       </header>
 
       {/* Main content */}

@@ -7,6 +7,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Landing from "./pages/Landing";
 import Quiz from "./pages/Quiz";
 import Results from "./pages/Results";
+import Methodology from "./pages/Methodology";
 
 function Router() {
   return (
@@ -14,6 +15,7 @@ function Router() {
       <Route path="/" component={Landing} />
       <Route path="/quiz" component={Quiz} />
       <Route path="/results" component={Results} />
+      <Route path="/methodology" component={Methodology} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>
